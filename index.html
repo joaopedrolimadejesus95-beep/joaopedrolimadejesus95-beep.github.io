@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Pedro Lima de Jesus · Desenvolvedor Backend</title>
+    <meta name="description" content="Portfólio de João Pedro Lima de Jesus, estudante de Ciência da Computação na UTFPR. Criador do Vendly, atendente de IA no WhatsApp para restaurantes. Node.js, Java, Python e PostgreSQL.">
+    <meta name="author" content="João Pedro Lima de Jesus">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="João Pedro Lima de Jesus · Desenvolvedor Backend">
+    <meta property="og:description" content="Estudante de Ciência da Computação na UTFPR, focado em backend e IA aplicada. Criador do Vendly.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/277580070?s=460&v=4">
+    <meta name="theme-color" content="#0b0a10">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Barra lateral fixa com os contatos (some no celular) -->
+    <aside class="lateral" aria-label="Links rápidos">
+        <a href="https://github.com/joaopedrolimadejesus95-beep" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-lima-de-jesus-jpldj" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="mailto:joaopedrolimajpldj@gmail.com" aria-label="E-mail" title="E-mail">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <a href="assets/docs/curriculo-joao-pedro-lima.pdf" download aria-label="Baixar currículo" title="Currículo (PDF)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>
+        </a>
+        <span class="lateral-linha" aria-hidden="true"></span>
+    </aside>
+
+    <header class="topo" id="topo">
+        <div class="topo-conteudo">
+            <a href="#inicio" class="marca">João Pedro<span>.</span></a>
+            <button class="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="menu" class="menu" aria-label="Seções">
+                <a href="#sobre">Sobre mim</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#trajetoria">Trajetória</a>
+                <a href="#certificacoes">Certificações</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <p class="hero-status"><span class="ponto" aria-hidden="true"></span> Aberto a estágio em backend</p>
+                <h1>Olá, eu sou <span class="destaque">João Pedro</span> <span class="cargo">Desenvolvedor Backend</span></h1>
+                <p class="hero-descricao">
+                    Estudo Ciência da Computação na UTFPR e coloquei em produção o <strong>Vendly</strong>,
+                    um atendente de IA no WhatsApp que recebe pedidos de restaurantes, confere o cardápio
+                    real e manda a comanda pra cozinha. Trabalho com Node.js, Java, Python e PostgreSQL.
+                </p>
+                <div class="hero-acoes">
+                    <a class="botao botao-primario" href="assets/docs/curriculo-joao-pedro-lima.pdf" download>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+                        Baixar currículo
+                    </a>
+                    <a class="botao botao-contorno" href="#projetos">Ver projetos</a>
+                </div>
+                <div class="hero-sociais">
+                    <a href="https://github.com/joaopedrolimadejesus95-beep" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-lima-de-jesus-jpldj" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:joaopedrolimajpldj@gmail.com">E-mail</a>
+                </div>
+            </div>
+            <div class="hero-foto">
+                <div class="foto-anel">
+                    <img src="https://avatars.githubusercontent.com/u/277580070?s=460&v=4" width="460" height="460" alt="Foto de João Pedro Lima de Jesus">
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="secao" id="sobre">
+            <h2 class="titulo-secao">Sobre <span>mim</span></h2>
+            <div class="sobre-grade">
+                <div class="sobre-texto revelar">
+                    <p>
+                        Sou técnico em Análise e Desenvolvimento de Sistemas e hoje curso Ciência da Computação
+                        na UTFPR, em Campo Mourão (PR). Gosto mais da parte que ninguém vê: regra de negócio,
+                        banco de dados, integração entre sistemas.
+                    </p>
+                    <p>
+                        Meu principal projeto é o Vendly. Ele começou como um bot de WhatsApp e virou um sistema
+                        com painel, controle de mesas, multiempresa e deploy num servidor Linux. No caminho aprendi
+                        uma coisa importante sobre IA: <strong>nunca confiar no número que ela calcula</strong>.
+                        Por isso, no Vendly, preço, total e troco são sempre recalculados pelo código a partir do cardápio real.
+                    </p>
+                    <p>
+                        Antes da programação, trabalhei um ano como jovem aprendiz na Havan, atendendo cliente.
+                        Isso me ajuda até hoje a entender quem vai usar o que eu construo.
+                    </p>
+                </div>
+                <dl class="sobre-fatos revelar">
+                    <div><dt>Onde</dt><dd>Campo Mourão, PR</dd></div>
+                    <div><dt>Formação</dt><dd>Ciência da Computação · UTFPR (em andamento)</dd></div>
+                    <div><dt>Foco</dt><dd>Backend e IA aplicada</dd></div>
+                    <div><dt>Inglês</dt><dd>Intermediário</dd></div>
+                    <div><dt>Buscando</dt><dd>Estágio em desenvolvimento backend</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="secao" id="habilidades">
+            <h2 class="titulo-secao">Minhas <span>habilidades</span></h2>
+            <p class="secao-intro">Separei o que já usei em projetos do que ainda estou estudando.</p>
+
+            <div class="habilidades-grade">
+                <div class="bloco revelar">
+                    <h3 class="bloco-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+                        Linguagens
+                    </h3>
+                    <ul class="tecnologias">
+                        <li><img src="assets/icons/javascript.svg" alt="" width="34" height="34">JavaScript</li>
+                        <li><img src="assets/icons/java.svg" alt="" width="34" height="34">Java</li>
+                        <li><img src="assets/icons/python.svg" alt="" width="34" height="34">Python</li>
+                        <li><span class="icone-texto" aria-hidden="true">SQL</span>SQL</li>
+                        <li><img src="assets/icons/html5.svg" alt="" width="34" height="34">HTML</li>
+                        <li><img src="assets/icons/css3.svg" alt="" width="34" height="34">CSS</li>
+                    </ul>
+                </div>
+
+                <div class="bloco revelar">
+                    <h3 class="bloco-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg>
+                        Back-end e integrações
+                    </h3>
+                    <ul class="tecnologias">
+                        <li><img src="assets/icons/nodejs.svg" alt="" width="34" height="34">Node.js</li>
+                        <li><img src="assets/icons/spring.svg" alt="" width="34" height="34">Spring Boot</li>
+                        <li><img class="inverter" src="assets/icons/flask.svg" alt="" width="34" height="34">Flask</li>
+                        <li><span class="icone-texto" aria-hidden="true">{ }</span>APIs REST</li>
+                        <li><span class="icone-texto" aria-hidden="true">↯</span>Webhooks</li>
+                    </ul>
+                </div>
+
+                <div class="bloco revelar">
+                    <h3 class="bloco-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
+                        Banco de dados e infra
+                    </h3>
+                    <ul class="tecnologias">
+                        <li><img src="assets/icons/postgresql.svg" alt="" width="34" height="34">PostgreSQL</li>
+                        <li><img src="assets/icons/docker.svg" alt="" width="34" height="34">Docker</li>
+                        <li><img src="assets/icons/linux.svg" alt="" width="34" height="34">Linux</li>
+                        <li><img src="assets/icons/git.svg" alt="" width="34" height="34">Git</li>
+                        <li><span class="icone-texto" aria-hidden="true">VPS</span>Deploy em VPS</li>
+                    </ul>
+                </div>
+
+                <div class="bloco revelar">
+                    <h3 class="bloco-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3"/></svg>
+                        IA aplicada
+                    </h3>
+                    <ul class="tecnologias">
+                        <li><span class="icone-texto" aria-hidden="true">API</span>API da Anthropic</li>
+                        <li><span class="icone-texto" aria-hidden="true">API</span>API do Gemini</li>
+                        <li><span class="icone-texto" aria-hidden="true">JSON</span>Saída estruturada</li>
+                        <li><span class="icone-texto" aria-hidden="true">💬</span>Chatbots</li>
+                    </ul>
+                </div>
+
+                <div class="bloco bloco-estudando revelar">
+                    <h3 class="bloco-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5L2 8.5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+                        Estudando agora
+                    </h3>
+                    <ul class="tecnologias">
+                        <li><img src="assets/icons/typescript.svg" alt="" width="34" height="34">TypeScript</li>
+                        <li><img src="assets/icons/react.svg" alt="" width="34" height="34">React</li>
+                        <li><span class="icone-texto" aria-hidden="true">⚙</span>Automação com IA</li>
+                        <li><span class="icone-texto" aria-hidden="true">LLM</span>Agentes de LLM</li>
+                        <li><span class="icone-texto" aria-hidden="true">✓</span>Avaliação de agentes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="secao" id="projetos">
+            <h2 class="titulo-secao">Meus <span>projetos</span></h2>
+
+            <div class="filtros" role="group" aria-label="Filtrar projetos por tecnologia">
+                <button class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro" data-filtro="node" aria-pressed="false">Node.js</button>
+                <button class="filtro" data-filtro="java" aria-pressed="false">Java</button>
+                <button class="filtro" data-filtro="python" aria-pressed="false">Python</button>
+                <button class="filtro" data-filtro="javascript" aria-pressed="false">JavaScript</button>
+                <button class="filtro" data-filtro="ia" aria-pressed="false">IA</button>
+            </div>
+
+            <!-- Projeto principal -->
+            <article class="projeto projeto-destaque revelar" data-tags="node ia">
+                <a class="projeto-imagem" href="https://meuvendly.com.br/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="assets/img/vendly.jpg" width="1280" height="800" alt="" loading="lazy">
+                </a>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">Projeto principal · em produção</p>
+                    <h3>Vendly</h3>
+                    <p class="projeto-descricao">
+                        Atendente de IA no WhatsApp para restaurantes. O cliente pede em linguagem natural,
+                        a IA confere com o cardápio real, registra o pedido e a comanda sai impressa na cozinha.
+                        Também tem controle de mesas pro atendimento presencial, no mesmo estoque e painel.
+                    </p>
+                    <ul class="projeto-pontos">
+                        <li>Preço, total e troco <strong>sempre recalculados pelo código</strong>, nunca pelo valor que a IA gerou</li>
+                        <li>Saída da IA em JSON estruturado (tool use) pra evitar respostas inconsistentes</li>
+                        <li>Multiempresa com dados isolados por cliente, login de atendente e planos</li>
+                        <li>PostgreSQL com transações e trava de linha pra pedidos simultâneos na mesma mesa</li>
+                        <li>Deploy em VPS Linux com Docker e pm2; apresentado ao Hotel Tecnológico da UTFPR</li>
+                    </ul>
+                    <ul class="etiquetas">
+                        <li>Node.js</li><li>PostgreSQL</li><li>Docker</li><li>API da Anthropic</li><li>Evolution API</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a class="botao botao-primario botao-pequeno" href="https://meuvendly.com.br/" target="_blank" rel="noopener">Ver site</a>
+                        <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/vendly" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <div class="projetos-grade">
+                <article class="projeto revelar" data-tags="java">
+                    <div class="projeto-imagem projeto-capa capa-mentora" aria-hidden="true">
+                        <div class="capa-streak">
+                            <span class="capa-numero">12</span>
+                            <span class="capa-legenda">dias seguidos</span>
+                            <div class="capa-dias"><i></i><i></i><i></i><i></i><i></i><i></i><i class="vazio"></i></div>
+                        </div>
+                    </div>
+                    <div class="projeto-corpo">
+                        <h3>Mentora</h3>
+                        <p class="projeto-descricao">
+                            App de hábitos e estudos com streak calculado a partir do histórico real de cumprimento,
+                            níveis e XP. Arquitetura em camadas Controller → Service → DAO com SQL puro via JDBC.
+                        </p>
+                        <ul class="etiquetas"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Thymeleaf</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-tags="javascript java">
+                    <a class="projeto-imagem" href="https://sistema-academico-web.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="assets/img/sistema-academico.jpg" width="1280" height="800" alt="" loading="lazy">
+                    </a>
+                    <div class="projeto-corpo">
+                        <h3>Sistema Acadêmico Web</h3>
+                        <p class="projeto-descricao">
+                            Portais de aluno, professor e coordenação com matrículas, notas e frequência.
+                            Começou como programa de console em Java e as regras foram portadas pra web.
+                        </p>
+                        <ul class="etiquetas"><li>JavaScript</li><li>HTML/CSS</li><li>Java (versão 1)</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://sistema-academico-web.vercel.app" target="_blank" rel="noopener">Ver no ar</a>
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/Sistema-Academico-WEB" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-tags="python ia">
+                    <div class="projeto-imagem">
+                        <img src="assets/img/genius-ia.jpg" width="1280" height="800" alt="" loading="lazy">
+                    </div>
+                    <div class="projeto-corpo">
+                        <h3>Genius IA</h3>
+                        <p class="projeto-descricao">
+                            Chatbot que detecta a intenção de cada mensagem antes de responder: conversa livre,
+                            cálculo escrito por extenso, jogo de adivinhação ou análise de imagem.
+                        </p>
+                        <ul class="etiquetas"><li>Python</li><li>Flask</li><li>API do Gemini</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/genius.ia" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-tags="javascript">
+                    <a class="projeto-imagem" href="https://joaopedrolimadejesus95-beep.github.io/algoritmos-js/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="assets/img/algoritmos-js.jpg" width="1280" height="800" alt="" loading="lazy">
+                    </a>
+                    <div class="projeto-corpo">
+                        <h3>Algoritmos JS</h3>
+                        <p class="projeto-descricao">
+                            Exercícios de lógica revisados, com testes que encontraram três bugs no código original
+                            e uma página interativa que usa as mesmas funções testadas.
+                        </p>
+                        <ul class="etiquetas"><li>JavaScript</li><li>Node test runner</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://joaopedrolimadejesus95-beep.github.io/algoritmos-js/" target="_blank" rel="noopener">Ver no ar</a>
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/algoritmos-js" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="projeto revelar" data-tags="ia">
+                    <div class="projeto-imagem projeto-capa capa-atlas" aria-hidden="true">
+                        <pre><span class="c-ok">✓</span> preço confere com o cardápio
+<span class="c-ok">✓</span> total recalculado
+<span class="c-erro">✗</span> item inventado: "x-tudo duplo"
+<span class="c-alerta">!</span> pediu desconto fora da regra</pre>
+                    </div>
+                    <div class="projeto-corpo">
+                        <p class="selo-andamento">Em desenvolvimento</p>
+                        <h3>ATLAS</h3>
+                        <p class="projeto-descricao">
+                            Red team do próprio bot do Vendly: testes que tentam fazer a IA errar, inventar produto
+                            ou quebrar regra de negócio, pra medir onde ela falha.
+                        </p>
+                        <ul class="etiquetas"><li>TypeScript</li><li>PostgreSQL</li><li>Avaliação de agentes</li></ul>
+                        <div class="projeto-links">
+                            <span class="link-indisponivel">Código ainda não publicado</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="filtro-vazio" hidden>Nenhum projeto com esse filtro.</p>
+        </section>
+
+        <!-- TRAJETÓRIA -->
+        <section class="secao" id="trajetoria">
+            <h2 class="titulo-secao">Minha <span>trajetória</span></h2>
+            <ol class="linha-tempo">
+                <li class="revelar">
+                    <span class="lt-data">2026</span>
+                    <div class="lt-cartao">
+                        <h3>Vendly apresentado ao Hotel Tecnológico da UTFPR</h3>
+                        <p>Apresentei o Vendly à incubadora de empresas da universidade como proposta de produto.</p>
+                    </div>
+                </li>
+                <li class="revelar">
+                    <span class="lt-data">2026</span>
+                    <div class="lt-cartao">
+                        <h3>Vendly em produção</h3>
+                        <p>Do primeiro bot ao sistema completo: deploy em servidor Linux, migração de JSON pra PostgreSQL e teste em restaurante real em Campo Mourão.</p>
+                    </div>
+                </li>
+                <li class="revelar">
+                    <span class="lt-data">Em andamento</span>
+                    <div class="lt-cartao">
+                        <h3>Ciência da Computação · UTFPR</h3>
+                        <p>Campus Campo Mourão. Na disciplina de Análise e Projeto de Software, trabalho em grupo numa plataforma para um cliente real, a Agência GV360.</p>
+                    </div>
+                </li>
+                <li class="revelar">
+                    <span class="lt-data">2024 – 2025</span>
+                    <div class="lt-cartao">
+                        <h3>Jovem Aprendiz · Havan</h3>
+                        <p>Atendente e auxiliar de repositor: atendimento ao cliente, dúvidas e reclamações. Curso de PDV pelo Senac.</p>
+                    </div>
+                </li>
+                <li class="revelar">
+                    <span class="lt-data">2022 – 2025</span>
+                    <div class="lt-cartao">
+                        <h3>Técnico em Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Unidade Polo Campo Mourão. Onde comecei a programar, com lógica, JavaScript e Java.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- CERTIFICAÇÕES -->
+        <section class="secao" id="certificacoes">
+            <h2 class="titulo-secao">Cursos e <span>certificações</span></h2>
+            <div class="certificados-grade">
+                <div class="certificado cert-google revelar">
+                    <h3>Google Cloud</h3>
+                    <ul>
+                        <li>Capacita+ Construa com Gemini <span>set/2026</span></li>
+                    </ul>
+                </div>
+                <div class="certificado cert-dio revelar">
+                    <h3>DIO</h3>
+                    <ul>
+                        <li>Fundamentos da IA Moderna <span>jun/2026</span></li>
+                    </ul>
+                </div>
+                <div class="certificado cert-alura revelar">
+                    <h3>Alura</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Lógica de Programação</li>
+                        <li>React Native</li>
+                        <li>Linux</li>
+                        <li>Arquitetura de Computadores</li>
+                        <li>UX e Acessibilidade</li>
+                    </ul>
+                    <p class="cert-periodo">2023 – 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="secao contato" id="contato">
+            <div class="contato-cartao revelar">
+                <h2>Vamos <span>conversar?</span></h2>
+                <p>Estou buscando estágio em desenvolvimento backend, remoto ou presencial. O jeito mais rápido de falar comigo é por e-mail.</p>
+                <div class="contato-email">
+                    <a class="botao botao-primario" href="mailto:joaopedrolimajpldj@gmail.com">joaopedrolimajpldj@gmail.com</a>
+                    <button class="botao botao-contorno" id="copiar-email" type="button">Copiar e-mail</button>
+                </div>
+                <p class="contato-aviso" id="aviso-copia" role="status" aria-live="polite"></p>
+                <div class="contato-links">
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-lima-de-jesus-jpldj" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/joaopedrolimadejesus95-beep" target="_blank" rel="noopener">GitHub</a>
+                    <a href="assets/docs/curriculo-joao-pedro-lima.pdf" download>Currículo (PDF)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>João Pedro Lima de Jesus · Campo Mourão, PR</p>
+        <p>Feito com HTML, CSS e JavaScript, sem framework ·<a href="https://github.com/joaopedrolimadejesus95-beep/joaopedrolimadejesus95-beep.github.io" target="_blank" rel="noopener">código deste site</a></p>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
