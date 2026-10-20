@@ -702,6 +702,21 @@ main, .rodape { margin-left: var(--lateral); }
 .lt-cartao h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .lt-cartao p { color: var(--suave); font-size: 0.92rem; }
 
+/* ---------------- eventos ---------------- */
+
+.evento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    padding: 24px;
+    transition: border-color 0.3s;
+}
+.evento:hover { border-color: var(--borda-forte); }
+.evento h3 { margin-bottom: 0; font-size: 1.15rem; }
+.evento .etiquetas { margin-top: auto; padding-top: 4px; }
+#eventos .certificados-grade { align-items: stretch; }
+
 /* ---------------- certificações ---------------- */
 
 .certificados-grade {
