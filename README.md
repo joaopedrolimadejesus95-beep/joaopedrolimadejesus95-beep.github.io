@@ -1,40 +1,68 @@
-<img src="banner.svg" alt="João Pedro — Estudante de Ciência da Computação, aberto a estágio em backend" width="100%">
+# Portfólio · João Pedro Lima de Jesus
 
-Estudo Ciência da Computação na UTFPR (Campo Mourão) e sou técnico em Análise e Desenvolvimento de Sistemas. Gosto de backend e de colocar IA pra resolver problema de verdade, tipo atender cliente no WhatsApp sem inventar preço de produto.
+![Capa do portfólio](assets/img/capa-compartilhamento.png)
 
-Estou buscando **estágio em desenvolvimento backend** (remoto ou presencial).
+Meu site pessoal de desenvolvedor: quem sou, o que estou construindo e onde conferir cada projeto.
 
-🌐 **Portfólio:** [joaopedrolimadejesus95-beep.github.io](https://joaopedrolimadejesus95-beep.github.io)
+🔗 **https://joaopedrolimadejesus95-beep.github.io**
 
-## Projetos em destaque
+## O que tem no site
 
-| Projeto | O que é | Stack |
-|---|---|---|
-| [**Vendly**](https://github.com/joaopedrolimadejesus95-beep/vendly) · [site](https://meuvendly.com.br/) | Atendente de IA no WhatsApp pra restaurantes: recebe pedidos com base no cardápio real, controle de mesas e estoque, multiempresa. Em produção | Node.js · PostgreSQL · Docker · API da Anthropic |
-| [**ATLAS**](https://github.com/joaopedrolimadejesus95-beep/Atlas) | Red team automatizado que ataca uma cópia de teste do Vendly: IDOR, vazamento entre empresas, token forjado, XSS. Achou 2 falhas reais, corrigidas: de 8/10 para 10/10 | Node.js · PostgreSQL · OWASP |
-| [**Mentora**](https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo) | Hábitos e estudos com streak calculado pelo histórico real, níveis e XP | Java 21 · Spring Boot · PostgreSQL |
-| [**Sistema Acadêmico Web**](https://github.com/joaopedrolimadejesus95-beep/Sistema-Academico-WEB) · [ver no ar](https://sistema-academico-web.vercel.app) | Portais de aluno, professor e coordenação, evoluído de uma versão console em Java | JavaScript · HTML/CSS |
-| [**Genius IA**](https://github.com/joaopedrolimadejesus95-beep/genius.ia) | Chatbot com detecção de intenção: conversa, cálculos, jogo e análise de imagem | Python · Flask · API do Gemini |
-| [**Algoritmos JS**](https://github.com/joaopedrolimadejesus95-beep/algoritmos-js) · [ver no ar](https://joaopedrolimadejesus95-beep.github.io/algoritmos-js/) | Exercícios de lógica com testes e uma página interativa | JavaScript · Node test runner |
+| Seção | Conteúdo |
+|---|---|
+| **Início** | Apresentação, currículo em PDF e links de contato |
+| **Sobre mim** | Formação, o que me interessa e como cheguei até aqui |
+| **Habilidades** | Separadas entre o que já usei em projetos e o que estou estudando |
+| **Projetos** | Vendly e ATLAS em destaque, mais Mentora, Sistema Acadêmico, Genius IA e Algoritmos JS, com filtro por tecnologia |
+| **Eventos** | NASA Space Apps Challenge e Ideathon Sebrae |
+| **Trajetória** | Linha do tempo: curso técnico, Havan, UTFPR e Vendly |
+| **Certificações** | Google Cloud, DIO e Alura |
+| **Contato** | E-mail (com botão de copiar), LinkedIn e GitHub |
 
-## Tecnologias
+## Decisões
 
-**Uso em projetos**
+- **HTML, CSS e JavaScript puro, sem framework.** O site é estático e pequeno; um framework só adicionaria build e dependências sem ganho real.
+- **Fontes e ícones no próprio repositório** (`assets/fonts` e `assets/icons`), sem depender de CDN externo.
+- **Acessível:** link "pular para o conteúdo", foco visível no teclado, menu com `aria-expanded`, textos alternativos e respeito à preferência de **movimento reduzido** do sistema (desliga as animações).
+- **Funciona sem JavaScript:** as animações de entrada só são ativadas quando o JS carrega (classe `js` no `<html>`), então o conteúdo nunca fica escondido.
+- **Prévia ao compartilhar:** tags Open Graph com uma capa própria em 1200×627, o formato que LinkedIn e WhatsApp usam.
 
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,js,java,spring,python,flask,postgres,docker,linux,git,html,css&perline=12" alt="Node.js, JavaScript, Java, Spring, Python, Flask, PostgreSQL, Docker, Linux, Git, HTML, CSS">
-</p>
+## Como o JavaScript funciona
 
-**Estudando agora:** TypeScript · React · automação com IA · agentes de LLM
+Tudo está em [`assets/js/main.js`](assets/js/main.js), sem bibliotecas:
 
-## Eventos
+- **Seção atual no menu:** um `IntersectionObserver` observa as seções e marca no menu a que está no meio da tela.
+- **Animação de entrada:** outro `IntersectionObserver` adiciona a classe `visivel` quando um card aparece, uma vez só.
+- **Filtro de projetos:** cada projeto tem um `data-tags` (ex: `data-tags="node seguranca"`); o filtro esconde os que não têm a tag escolhida.
+- **Copiar e-mail:** usa a `navigator.clipboard` e, se o navegador bloquear, mostra o e-mail pra copiar à mão.
 
-- **NASA Space Apps Challenge 2024**: software educacional de prevenção e combate a incêndios nas escolas (documentação e pitch)
-- **Ideathon Sebrae 2025**: líder da equipe, com uma lixeira que troca recicláveis por fichas para livros
-- **NASA Space Apps Challenge 2026**: inscrito para novembro
+## Estrutura
 
-## Contato
+```
+├── index.html              # todo o conteúdo do site
+└── assets/
+    ├── css/style.css       # estilos (cores e medidas em variáveis no :root)
+    ├── js/main.js          # menu, seção atual, filtro de projetos, animações
+    ├── img/                # prints dos projetos, capa de compartilhamento e favicon
+    ├── icons/              # ícones das tecnologias (Devicon)
+    ├── fonts/              # Space Grotesk, Inter e JetBrains Mono
+    └── docs/               # currículo em PDF
+```
 
-[![Portfólio](https://img.shields.io/badge/Portfólio-joaopedrolimadejesus95--beep.github.io-6d28d9?style=for-the-badge&logo=githubpages&logoColor=white)](https://joaopedrolimadejesus95-beep.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-João%20Pedro-6d28d9?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-pedro-lima-de-jesus-jpldj)
-[![E-mail](https://img.shields.io/badge/E--mail-joaopedrolimajpldj%40gmail.com-6d28d9?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joaopedrolimajpldj@gmail.com)
+## Como atualizar
+
+- **Adicionar um projeto:** copie um `<article class="projeto">` no `index.html`, troque o conteúdo e ajuste o `data-tags` pra ele aparecer nos filtros certos.
+- **Adicionar um evento:** copie um `<article class="evento">` dentro da seção `#eventos`.
+- **Trocar a cor de destaque:** mude `--roxo` e `--roxo-claro` no topo do `style.css`.
+- **Atualizar o currículo:** substitua `assets/docs/curriculo-joao-pedro-lima.pdf` mantendo o mesmo nome.
+
+## Rodar localmente
+
+```bash
+python -m http.server 8000
+# abra http://localhost:8000
+```
+
+## Créditos
+
+Ícones de tecnologia: [Devicon](https://devicon.dev) (MIT). Fontes: Space Grotesk, Inter e JetBrains Mono (SIL Open Font License).
