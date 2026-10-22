@@ -9,7 +9,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="João Pedro Lima de Jesus · Desenvolvedor Backend">
     <meta property="og:description" content="Estudante de Ciência da Computação na UTFPR, focado em backend e IA aplicada. Criador do Vendly.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/277580070?s=460&v=4">
+    <meta property="og:url" content="https://joaopedrolimadejesus95-beep.github.io/">
+    <meta property="og:image" content="https://joaopedrolimadejesus95-beep.github.io/assets/img/capa-compartilhamento.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:image:alt" content="João Pedro Lima de Jesus, Desenvolvedor Backend, aberto a estágio">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#0b0a10">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -103,6 +108,10 @@
                         Por isso, no Vendly, preço, total e troco são sempre recalculados pelo código a partir do cardápio real.
                     </p>
                     <p>
+                        Depois criei o ATLAS pra atacar o próprio Vendly e achar as falhas antes que alguém de fora achasse.
+                        Ele encontrou duas, eu corrigi, e hoje todos os 10 ataques são bloqueados.
+                    </p>
+                    <p>
                         Antes da programação, trabalhei um ano como jovem aprendiz na Havan, atendendo cliente.
                         Isso me ajuda até hoje a entender quem vai usar o que eu construo.
                     </p>
@@ -149,6 +158,7 @@
                         <li><img class="inverter" src="assets/icons/flask.svg" alt="" width="34" height="34">Flask</li>
                         <li><span class="icone-texto" aria-hidden="true">{ }</span>APIs REST</li>
                         <li><span class="icone-texto" aria-hidden="true">↯</span>Webhooks</li>
+                        <li><span class="icone-texto" aria-hidden="true">🛡</span>Testes de segurança</li>
                     </ul>
                 </div>
 
@@ -206,6 +216,7 @@
                 <button class="filtro" data-filtro="python" aria-pressed="false">Python</button>
                 <button class="filtro" data-filtro="javascript" aria-pressed="false">JavaScript</button>
                 <button class="filtro" data-filtro="ia" aria-pressed="false">IA</button>
+                <button class="filtro" data-filtro="seguranca" aria-pressed="false">Segurança</button>
             </div>
 
             <!-- Projeto principal -->
@@ -227,6 +238,7 @@
                         <li>Multiempresa com dados isolados por cliente, login de atendente e planos</li>
                         <li>PostgreSQL com transações e trava de linha pra pedidos simultâneos na mesma mesa</li>
                         <li>Deploy em VPS Linux com Docker e pm2; apresentado ao Hotel Tecnológico da UTFPR</li>
+                        <li>Auditado pelo <a href="#atlas">ATLAS</a>, meu red team: 10 de 10 ataques bloqueados</li>
                     </ul>
                     <ul class="etiquetas">
                         <li>Node.js</li><li>PostgreSQL</li><li>Docker</li><li>API da Anthropic</li><li>Evolution API</li>
@@ -234,6 +246,34 @@
                     <div class="projeto-links">
                         <a class="botao botao-primario botao-pequeno" href="https://meuvendly.com.br/" target="_blank" rel="noopener">Ver site</a>
                         <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/vendly" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Segundo destaque: o red team do Vendly -->
+            <article class="projeto projeto-destaque revelar" id="atlas" data-tags="node seguranca">
+                <a class="projeto-imagem" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="assets/img/atlas.jpg" width="1280" height="800" alt="" loading="lazy">
+                </a>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">Segurança · red team</p>
+                    <h3>ATLAS</h3>
+                    <p class="projeto-descricao">
+                        Red team automatizado que ataca uma cópia de teste do Vendly e mede onde as defesas
+                        seguram. Cada ataque vira um achado com gravidade, passo de reprodução e correção sugerida.
+                    </p>
+                    <ul class="projeto-pontos">
+                        <li>10 ataques: IDOR, vazamento de dados entre empresas, token forjado, webhook sem autenticação, senha fraca e XSS</li>
+                        <li>A primeira rodada achou <strong>2 falhas reais</strong>; corrigi no Vendly e a rodada seguinte foi de <strong>8/10 para 10/10</strong></li>
+                        <li>Cria duas empresas fictícias no banco de teste e nunca roda contra produção</li>
+                        <li>Gera relatório em Markdown, JSON e um painel visual</li>
+                    </ul>
+                    <ul class="etiquetas">
+                        <li>Node.js</li><li>PostgreSQL</li><li>OWASP API Top 10</li><li>Testes de segurança</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a class="botao botao-primario botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener">Código</a>
+                        <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas/blob/main/RELATORIO.md" target="_blank" rel="noopener">Ver relatório</a>
                     </div>
                 </div>
             </article>
@@ -313,26 +353,6 @@
                     </div>
                 </article>
 
-                <article class="projeto revelar" data-tags="ia">
-                    <div class="projeto-imagem projeto-capa capa-atlas" aria-hidden="true">
-                        <pre><span class="c-ok">✓</span> preço confere com o cardápio
-<span class="c-ok">✓</span> total recalculado
-<span class="c-erro">✗</span> item inventado: "x-tudo duplo"
-<span class="c-alerta">!</span> pediu desconto fora da regra</pre>
-                    </div>
-                    <div class="projeto-corpo">
-                        <p class="selo-andamento">Em desenvolvimento</p>
-                        <h3>ATLAS</h3>
-                        <p class="projeto-descricao">
-                            Red team do próprio bot do Vendly: testes que tentam fazer a IA errar, inventar produto
-                            ou quebrar regra de negócio, pra medir onde ela falha.
-                        </p>
-                        <ul class="etiquetas"><li>TypeScript</li><li>PostgreSQL</li><li>Avaliação de agentes</li></ul>
-                        <div class="projeto-links">
-                            <span class="link-indisponivel">Código ainda não publicado</span>
-                        </div>
-                    </div>
-                </article>
             </div>
             <p class="filtro-vazio" hidden>Nenhum projeto com esse filtro.</p>
         </section>

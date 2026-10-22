@@ -604,6 +604,7 @@ main, .rodape { margin-left: var(--lateral); }
     background: var(--roxo);
 }
 .projeto-pontos strong { color: var(--texto); font-weight: 600; }
+.projeto-pontos a { color: var(--roxo-claro); text-underline-offset: 3px; }
 
 .projetos-grade {
     display: grid;
