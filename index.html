@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Pedro Lima de Jesus · Desenvolvedor Backend e IA aplicada</title>
-    <meta name="description" content="Portfólio de João Pedro Lima de Jesus, estudante de Ciência da Computação na UTFPR. Criador do Vendly, agente de IA no WhatsApp para restaurantes, e do ATLAS, que testa a segurança dele. Node.js, Python, PostgreSQL, LLMs e automação.">
+    <meta name="description" content="Portfólio de João Pedro Lima de Jesus, estudante de Ciência da Computação na UTFPR. Criador do Vendly, agente de IA no WhatsApp para restaurantes, e do ATLAS, framework de Red Team automatizado para SaaS e Agentes de IA. Node.js, TypeScript, PostgreSQL, Docker e IA.">
     <meta name="author" content="João Pedro Lima de Jesus">
     <meta property="og:type" content="website">
     <meta property="og:title" content="João Pedro Lima de Jesus · Desenvolvedor Backend e IA aplicada">
@@ -69,8 +69,8 @@
                 <p class="hero-descricao">
                     Estudo Ciência da Computação na UTFPR e coloquei em produção o <strong>Vendly</strong>,
                     um agente de IA no WhatsApp que recebe pedidos de restaurantes, confere o cardápio
-                    real e manda a comanda pra cozinha. Trabalho com Node.js, Java, Python e PostgreSQL,
-                    integrando LLMs a sistemas reais e automatizando o fluxo de ponta a ponta.
+                    real e manda a comanda pra cozinha. Trabalho com <strong>Node.js, TypeScript, PostgreSQL, Docker e IA</strong>,
+                    integrando LLMs a sistemas reais com segurança e automação de ponta a ponta.
                 </p>
                 <div class="hero-acoes">
                     <a class="botao botao-primario" href="assets/docs/curriculo-joao-pedro-lima.pdf" download>
@@ -109,8 +109,7 @@
                         Por isso, no Vendly, preço, total e troco são sempre recalculados pelo código a partir do cardápio real.
                     </p>
                     <p>
-                        Depois criei o ATLAS pra atacar o próprio Vendly e achar as falhas antes que alguém de fora achasse.
-                        Ele encontrou duas, eu corrigi, e hoje todos os 10 ataques são bloqueados.
+                        Depois criei o <strong>ATLAS</strong> — um framework de Red Team automatizado com 3 baterias de ataque (Controle de Acesso, XSS e Prompt Injection na IA) — pra auditar o próprio Vendly direto no banco de dados. Ele encontrou duas falhas na primeira rodada, eu corrigi, e hoje todas as 16 sondas são bloqueadas.
                     </p>
                     <p>
                         Agora estou construindo o <strong>Radar de Vagas</strong>, uma automação com LLM que busca vagas
@@ -125,7 +124,7 @@
                 <dl class="sobre-fatos revelar">
                     <div><dt>Onde</dt><dd>Campo Mourão, PR</dd></div>
                     <div><dt>Formação</dt><dd>Ciência da Computação · UTFPR (em andamento)</dd></div>
-                    <div><dt>Foco</dt><dd>Backend, LLMs e automação</dd></div>
+                    <div><dt>Foco</dt><dd>Node.js, TypeScript, PostgreSQL, Docker e IA</dd></div>
                     <div><dt>Inglês</dt><dd>Intermediário</dd></div>
                     <div><dt>Buscando</dt><dd>Estágio em backend e IA aplicada</dd></div>
                 </dl>
@@ -144,6 +143,7 @@
                         Linguagens
                     </h3>
                     <ul class="tecnologias">
+                        <li><img src="assets/icons/typescript.svg" alt="" width="34" height="34">TypeScript</li>
                         <li><img src="assets/icons/javascript.svg" alt="" width="34" height="34">JavaScript</li>
                         <li><img src="assets/icons/java.svg" alt="" width="34" height="34">Java</li>
                         <li><img src="assets/icons/python.svg" alt="" width="34" height="34">Python</li>
@@ -202,14 +202,12 @@
                         Estudando agora
                     </h3>
                     <ul class="tecnologias">
-                        <li><img src="assets/icons/typescript.svg" alt="" width="34" height="34">TypeScript</li>
-                        <li><img src="assets/icons/react.svg" alt="" width="34" height="34">React</li>
-                        <li><span class="icone-texto" aria-hidden="true">⚙</span>Automação com IA</li>
-                        <li><span class="icone-texto" aria-hidden="true">LLM</span>Agentes de LLM</li>
-                        <li><span class="icone-texto" aria-hidden="true">✓</span>Avaliação de agentes</li>
-                        <li><span class="icone-texto" aria-hidden="true">n8n</span>n8n</li>
+                        <li><span class="icone-texto" aria-hidden="true">AWS</span>AWS Cloud</li>
+                        <li><span class="icone-texto" aria-hidden="true">LLM</span>LLMs &amp; Agentes</li>
+                        <li><span class="icone-texto" aria-hidden="true">n8n</span>n8n Workflows</li>
+                        <li><span class="icone-texto" aria-hidden="true">API</span>Postman</li>
                         <li><span class="icone-texto" aria-hidden="true">RAG</span>RAG com pgvector</li>
-                        <li><span class="icone-texto" aria-hidden="true">AWS</span>AWS</li>
+                        <li><span class="icone-texto" aria-hidden="true">✓</span>Avaliação de agentes</li>
                     </ul>
                 </div>
             </div>
@@ -248,10 +246,10 @@
                         <li>Multiempresa com dados isolados por cliente, login de atendente e planos</li>
                         <li>PostgreSQL com transações e trava de linha pra pedidos simultâneos na mesma mesa</li>
                         <li>Deploy em VPS Linux com Docker e pm2; apresentado ao Hotel Tecnológico da UTFPR</li>
-                        <li>Auditado pelo <a href="#atlas">ATLAS</a>, meu red team: 10 de 10 ataques bloqueados</li>
+                        <li>Auditado pelo <a href="#atlas">ATLAS</a>, meu red team: 16 de 16 sondas bloqueadas (incluindo Prompt Injection na IA)</li>
                     </ul>
                     <ul class="etiquetas">
-                        <li>Node.js</li><li>PostgreSQL</li><li>Docker</li><li>API da Anthropic</li><li>Evolution API</li>
+                        <li>Node.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Docker</li><li>API da Anthropic</li><li>Evolution API</li>
                     </ul>
                     <div class="projeto-links">
                         <a class="botao botao-primario botao-pequeno" href="https://meuvendly.com.br/" target="_blank" rel="noopener">Ver site</a>
@@ -261,29 +259,29 @@
             </article>
 
             <!-- Segundo destaque: o red team do Vendly -->
-            <article class="projeto projeto-destaque revelar" id="atlas" data-tags="node seguranca">
-                <a class="projeto-imagem" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-                    <img src="assets/img/atlas.jpg" width="1280" height="800" alt="" loading="lazy">
+            <article class="projeto projeto-destaque revelar" id="atlas" data-tags="node seguranca ia">
+                <a class="projeto-imagem" href="atlas-painel.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="assets/img/atlas-v2.svg" width="1280" height="800" alt="Painel executivo do ATLAS v2 mostrando 16 de 16 sondas defendidas" loading="lazy">
                 </a>
                 <div class="projeto-corpo">
-                    <p class="projeto-rotulo">Segurança · red team</p>
+                    <p class="projeto-rotulo">Segurança &amp; AI Red Team · v2</p>
                     <h3>ATLAS</h3>
                     <p class="projeto-descricao">
-                        Red team automatizado que ataca uma cópia de teste do Vendly e mede onde as defesas
-                        seguram. Cada ataque vira um achado com gravidade, passo de reprodução e correção sugerida.
+                        Framework de Red Team automatizado para SaaS e Agentes de IA. Executa 3 baterias de ataque
+                        e valida o impacto real direto no PostgreSQL (<em>Ground Truth</em>), garantindo zero falsos positivos.
                     </p>
                     <ul class="projeto-pontos">
-                        <li>10 ataques: IDOR, vazamento de dados entre empresas, token forjado, webhook sem autenticação, senha fraca e XSS</li>
-                        <li>A primeira rodada achou <strong>2 falhas reais</strong>; corrigi no Vendly e a rodada seguinte foi de <strong>8/10 para 10/10</strong></li>
-                        <li>Cria duas empresas fictícias no banco de teste e nunca roda contra produção</li>
-                        <li>Gera relatório em Markdown, JSON e um painel visual</li>
+                        <li><strong>16 sondas em 3 baterias:</strong> Controle de Acesso/IDOR, XSS/Injeção e <strong>Prompt Injection em Agentes de IA</strong> (preço a R$ 0,01, pedido sem pagamento, vazamento de prompt)</li>
+                        <li>A primeira rodada achou <strong>2 falhas reais</strong>; corrigi no Vendly e a postura evoluiu de <strong>8/10 para 16/16 bloqueados (100%)</strong></li>
+                        <li>Arquitetura desacoplada por adaptadores, com <strong>58 testes automatizados</strong> rodando em CI/CD (GitHub Actions)</li>
+                        <li>Gera histórico persistente com redação de segredos, relatórios MD/JSON e um <strong>painel executivo interativo offline-first</strong></li>
                     </ul>
                     <ul class="etiquetas">
-                        <li>Node.js</li><li>PostgreSQL</li><li>OWASP API Top 10</li><li>Testes de segurança</li>
+                        <li>Node.js</li><li>PostgreSQL</li><li>AI Red Team</li><li>OWASP API Top 10</li><li>GitHub Actions</li>
                     </ul>
                     <div class="projeto-links">
-                        <a class="botao botao-primario botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener">Código</a>
-                        <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas/blob/main/RELATORIO.md" target="_blank" rel="noopener">Ver relatório</a>
+                        <a class="botao botao-primario botao-pequeno" href="atlas-painel.html" target="_blank" rel="noopener">Ver painel ao vivo</a>
+                        <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener">Código</a>
                     </div>
                 </div>
             </article>
