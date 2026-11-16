@@ -13,9 +13,9 @@ Meu site pessoal de desenvolvedor: quem sou, o que estou construindo e onde conf
 | **Início** | Apresentação, currículo em PDF e links de contato |
 | **Sobre mim** | Formação, o que me interessa e como cheguei até aqui |
 | **Habilidades** | Separadas entre o que já usei em projetos e o que estou estudando (n8n, RAG, AWS, avaliação de LLMs) |
-| **Projetos** | Vendly e ATLAS em destaque, mais Radar de Vagas (em desenvolvimento), Mentora, Sistema Acadêmico, Genius IA e Algoritmos JS, com filtro por tecnologia |
-| **Eventos** | NASA Space Apps Challenge e Ideathon Sebrae |
-| **Trajetória** | Linha do tempo: curso técnico, Havan, UTFPR e Vendly |
+| **Projetos** | Vendly, ATLAS e AgroShield em destaque, mais Radar de Vagas (em desenvolvimento), Mentora, Sistema Acadêmico, Genius IA e Algoritmos JS, com filtro por tecnologia |
+| **Eventos** | NASA Space Apps Challenge (2024 e 2026 · AgroShield) e Ideathon Sebrae |
+| **Trajetória** | Linha do tempo: curso técnico, Havan, UTFPR, Vendly e AgroShield |
 | **Certificações** | Google Cloud, DIO e Alura |
 | **Contato** | E-mail (com botão de copiar), LinkedIn e GitHub |
 

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Pedro Lima de Jesus · Desenvolvedor Backend e IA aplicada</title>
-    <meta name="description" content="Portfólio de João Pedro Lima de Jesus, estudante de Ciência da Computação na UTFPR. Criador do Vendly, agente de IA no WhatsApp para restaurantes, e do ATLAS, framework de Red Team automatizado para SaaS e Agentes de IA. Node.js, TypeScript, PostgreSQL, Docker e IA.">
+    <meta name="description" content="Portfólio de João Pedro Lima de Jesus, estudante de Ciência da Computação na UTFPR. Criador do Vendly (agente de IA no WhatsApp para restaurantes), do ATLAS (framework de Red Team automatizado para SaaS e Agentes de IA) e co-criador do AgroShield (decisão agronômica com satélites da NASA, Cadeia de Markov e SMS 2G). Node.js, TypeScript, PostgreSQL, Docker e IA.">
     <meta name="author" content="João Pedro Lima de Jesus">
     <meta property="og:type" content="website">
     <meta property="og:title" content="João Pedro Lima de Jesus · Desenvolvedor Backend e IA aplicada">
-    <meta property="og:description" content="Estudante de Ciência da Computação na UTFPR, focado em backend, LLMs e automação. Criador do Vendly.">
+    <meta property="og:description" content="Estudante de Ciência da Computação na UTFPR, focado em backend, LLMs e automação. Criador do Vendly, ATLAS e AgroShield.">
     <meta property="og:url" content="https://joaopedrolimadejesus95-beep.github.io/">
     <meta property="og:image" content="https://joaopedrolimadejesus95-beep.github.io/assets/img/capa-compartilhamento.png">
     <meta property="og:image:width" content="1200">
@@ -69,8 +69,8 @@
                 <p class="hero-descricao">
                     Estudo Ciência da Computação na UTFPR e coloquei em produção o <strong>Vendly</strong>,
                     um agente de IA no WhatsApp que recebe pedidos de restaurantes, confere o cardápio
-                    real e manda a comanda pra cozinha. Trabalho com <strong>Node.js, TypeScript, PostgreSQL, Docker e IA</strong>,
-                    integrando LLMs a sistemas reais com segurança e automação de ponta a ponta.
+                    real e manda a comanda pra cozinha. Também desenvolvi o <strong>ATLAS</strong> (Red Team para SaaS e IA) e o <strong>AgroShield</strong> (decisão agronômica com satélites da NASA e SMS 2G offline). Trabalho com <strong>Node.js, TypeScript, PostgreSQL, Docker e IA</strong>,
+                    integrando LLMs a sistemas reais com segurança e travas determinísticas.
                 </p>
                 <div class="hero-acoes">
                     <a class="botao botao-primario" href="assets/docs/curriculo-joao-pedro-lima.pdf" download>
@@ -110,6 +110,9 @@
                     </p>
                     <p>
                         Depois criei o <strong>ATLAS</strong> — um framework de Red Team automatizado com 3 baterias de ataque (Controle de Acesso, XSS e Prompt Injection na IA) — pra auditar o próprio Vendly direto no banco de dados. Ele encontrou duas falhas na primeira rodada, eu corrigi, e hoje todas as 16 sondas são bloqueadas.
+                    </p>
+                    <p>
+                        No <strong>NASA Space Apps Challenge 2026</strong>, levei essa mesma filosofia de segurança determinística para o campo com o <strong>AgroShield</strong>: uma plataforma que cruza satélites da NASA, Cadeia de Markov com memória agrícola e manuais oficiais da EMBRAPA para prevenir perdas na lavoura e responder o produtor via <strong>SMS 2G sem internet</strong>.
                     </p>
                     <p>
                         Agora estou construindo o <strong>Radar de Vagas</strong>, uma automação com LLM que busca vagas
@@ -286,6 +289,34 @@
                 </div>
             </article>
 
+            <!-- Terceiro destaque: AgroShield (NASA Space Apps 2026) -->
+            <article class="projeto projeto-destaque revelar" id="agroshield" data-tags="node ia javascript">
+                <a class="projeto-imagem" href="https://github.com/heitor1240/AgroShield" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="assets/img/agroshield.jpg" width="1280" height="720" alt="Painel do AgroShield analisando talhão agrícola em Campo Mourão via satélite da NASA" loading="lazy">
+                </a>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">NASA Space Apps 2026 · AgTech &amp; IA Determinística</p>
+                    <h3>AgroShield</h3>
+                    <p class="projeto-descricao">
+                        Plataforma de decisão agronômica e prevenção de danos que funde satélites da NASA,
+                        modelagem por Cadeia de Markov com Memória Agrícola e manuais oficiais da EMBRAPA,
+                        entregando recomendações na web e por <strong>SMS 2G puro (sem internet)</strong> no celular do produtor.
+                    </p>
+                    <ul class="projeto-pontos">
+                        <li><strong>Cadeia de Markov com Memória Agrícola:</strong> calcula a probabilidade de persistência entre dias secos e chuvosos somando o histórico hídrico acumulado no solo nos últimos 30 dias da <strong>NASA POWER</strong></li>
+                        <li><strong>Dupla trava determinística EMBRAPA / IDR-Paraná:</strong> a IA nunca decide sozinha — limites físicos de vento (&ge; 10 km/h), umidade de solo (&ge; 80%), queda de pressão atmosférica (hPa) e <strong>Delta-T</strong> bloqueiam operações de risco antes e depois do LLM</li>
+                        <li><strong>Comunicação bidirecional via SMS 2G offline:</strong> disparo ativo e webhook conversacional (<em>Simple SMS Gateway</em> + <em>Twilio HMAC-SHA1</em>) respondendo em até 150 caracteres onde não pega 4G</li>
+                        <li><strong>Fusão multicamadas &amp; 49 testes automatizados:</strong> umidade radicular (NASA SMAP), calor foliar (MODIS), mapa de calor regional de chuva, <em>stress test</em> climático e exportação de laudo em PDF</li>
+                    </ul>
+                    <ul class="etiquetas">
+                        <li>Node.js</li><li>TypeScript</li><li>React</li><li>PostgreSQL</li><li>NASA APIs</li><li>Cadeia de Markov</li><li>SMS 2G</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a class="botao botao-primario botao-pequeno" href="https://github.com/heitor1240/AgroShield" target="_blank" rel="noopener">Ver código e documentação</a>
+                    </div>
+                </div>
+            </article>
+
             <div class="projetos-grade">
                 <!-- Em desenvolvimento: quando o repositório existir, adicione aqui o <div class="projeto-links"> com o link do código -->
                 <article class="projeto revelar" data-tags="ia node">
@@ -407,12 +438,12 @@
                     <ul class="etiquetas"><li>Minha parte: líder da equipe</li><li>Sustentabilidade</li></ul>
                 </article>
                 <article class="lt-cartao evento revelar">
-                    <p class="selo-andamento">Inscrito · nov/2026</p>
-                    <h3>NASA Space Apps Challenge</h3>
+                    <p class="projeto-rotulo">Hackathon · nov/2026</p>
+                    <h3>NASA Space Apps Challenge · Field Shift</h3>
                     <p>
-                        Participação confirmada na edição de novembro de 2026. Este card ganha o projeto
-                        e o resultado depois do evento.
+                        Desenvolvemos o <a href="#agroshield"><strong>AgroShield</strong></a>: sistema preditivo que combina dados orbitais da NASA, Cadeia de Markov com memória agrícola, trava determinística da EMBRAPA e comunicação bidirecional via SMS 2G para produtores rurais sem internet.
                     </p>
+                    <ul class="etiquetas"><li>Minha parte: Back-end, IA determinística, Gateway SMS 2G &amp; Pitch</li></ul>
                 </article>
             </div>
         </section>
@@ -421,6 +452,13 @@
         <section class="secao" id="trajetoria">
             <h2 class="titulo-secao">Minha <span>trajetória</span></h2>
             <ol class="linha-tempo">
+                <li class="revelar">
+                    <span class="lt-data">2026</span>
+                    <div class="lt-cartao">
+                        <h3>AgroShield no NASA Space Apps Challenge</h3>
+                        <p>Construção do motor biofísico com satélites da NASA, Cadeia de Markov com memória agrícola, dupla trava determinística da EMBRAPA e alertas bidirecionais por SMS 2G offline para a região de Campo Mourão.</p>
+                    </div>
+                </li>
                 <li class="revelar">
                     <span class="lt-data">2026</span>
                     <div class="lt-cartao">
