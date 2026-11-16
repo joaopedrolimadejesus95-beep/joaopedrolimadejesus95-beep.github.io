@@ -664,11 +664,61 @@ main, .rodape { margin-left: var(--lateral); }
 
 .capa-mentora { background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.25), transparent 60%), var(--fundo-2); }
 .capa-streak { text-align: center; }
-.capa-numero { display: block; font: 700 3.6rem/1 var(--titulo); color: var(--texto); }
-.capa-legenda { display: block; font: 500 0.8rem var(--mono); color: var(--suave); margin: 6px 0 14px; }
-.capa-dias { display: flex; gap: 6px; justify-content: center; }
-.capa-dias i { width: 18px; height: 18px; border-radius: 5px; background: var(--roxo); }
-.capa-dias i.vazio { background: transparent; border: 1px dashed var(--borda-forte); }
+.capa-numero { display: block; font: 700 2.1rem/1.1 var(--titulo); color: var(--texto); }
+.capa-legenda { display: block; font: 500 0.82rem var(--mono); color: var(--roxo-claro); margin: 8px 0 14px; }
+.capa-tags-mini { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.capa-tags-mini span {
+    font: 500 0.72rem var(--mono);
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--cartao);
+    border: 1px solid var(--borda-forte);
+    color: var(--suave);
+}
+
+.outros-projetos {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--borda);
+}
+.outros-titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--suave);
+    margin-bottom: 16px;
+    font-family: var(--mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.outros-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.projeto-compacto {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 20px;
+}
+.projeto-compacto:hover { transform: translateY(-2px); }
+.projeto-compacto-info { flex: 1; min-width: 0; }
+.projeto-compacto-info h4 {
+    font-family: var(--titulo);
+    font-size: 1.02rem;
+    margin: 0 0 4px;
+    color: var(--texto);
+}
+.projeto-compacto-info p {
+    font-size: 0.88rem;
+    color: var(--suave);
+}
+.projeto-compacto .projeto-links {
+    margin-top: 0;
+    padding-top: 0;
+    flex-shrink: 0;
+}
 
 .capa-radar {
     background: radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.14), rgba(139, 92, 246, 0.22) 45%, transparent 70%), var(--fundo-2);
@@ -912,6 +962,7 @@ main, .rodape { margin-left: var(--lateral); }
     .topo-conteudo { padding: 0 16px; }
     .projeto-destaque .projeto-corpo { padding: 22px; }
     .projetos-grade { grid-template-columns: 1fr; }
+    .projeto-compacto { flex-direction: column; align-items: flex-start; gap: 12px; }
     .contato-cartao { padding: 48px 20px; }
     .contato-email .botao { width: 100%; word-break: break-all; }
 
