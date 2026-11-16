@@ -34,6 +34,14 @@ linksMenu.forEach((link) => link.addEventListener("click", fecharMenu));
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") fecharMenu();
 });
+document.addEventListener("click", (e) => {
+    if (menu.classList.contains("aberto") && !topo.contains(e.target)) {
+        fecharMenu();
+    }
+});
+window.matchMedia("(min-width: 961px)").addEventListener("change", (e) => {
+    if (e.matches) fecharMenu();
+});
 
 // ---------- destaca no menu a seção que está na tela ----------
 
@@ -91,18 +99,26 @@ filtros.forEach((botao) => {
 
 const elementosRevelar = document.querySelectorAll(".revelar");
 
-const observadorRevelar = new IntersectionObserver(
-    (entradas, observador) => {
-        entradas.forEach((entrada) => {
-            if (entrada.isIntersecting) {
-                entrada.target.classList.add("visivel");
-                observador.unobserve(entrada.target); // anima só uma vez
-            }
-        });
-    },
-    { threshold: 0.12 }
-);
-elementosRevelar.forEach((el) => observadorRevelar.observe(el));
+if ("IntersectionObserver" in window) {
+    const observadorRevelar = new IntersectionObserver(
+        (entradas, observador) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add("visivel");
+                    observador.unobserve(entrada.target); // anima só uma vez
+                }
+            });
+        },
+        { threshold: 0.05 }
+    );
+    elementosRevelar.forEach((el) => observadorRevelar.observe(el));
+} else {
+    elementosRevelar.forEach((el) => el.classList.add("visivel"));
+}
+
+window.addEventListener("beforeprint", () => {
+    elementosRevelar.forEach((el) => el.classList.add("visivel"));
+});
 
 // ---------- copiar e-mail ----------
 
