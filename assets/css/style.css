@@ -1,6 +1,7 @@
 /* ==========================================================
    Portfólio · João Pedro Lima de Jesus
-   Base escura, um único destaque (roxo), cards com borda sutil.
+   Atmosfera "Noite de Tinta, Bordo & Lampião"
+   Petróleo noturno, marfim de papel, carmesim de bordo e ouro de lampião.
    ========================================================== */
 
 @font-face { font-family: "Space Grotesk"; font-weight: 500; font-display: swap; src: url("../fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
@@ -12,28 +13,34 @@
 @font-face { font-family: "JetBrains Mono"; font-weight: 600; font-display: swap; src: url("../fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
 
 :root {
-    --fundo: #0b0a10;
-    --fundo-2: #100e17;
-    --cartao: #14121c;
-    --cartao-hover: #1a1725;
-    --borda: #26222f;
-    --borda-forte: #3a3348;
-    --texto: #ece9f5;
-    --suave: #9c96ae;
-    --fraco: #6d6880;
-    --roxo: #8b5cf6;
-    --roxo-claro: #a78bfa;
-    --roxo-fundo: rgba(139, 92, 246, 0.12);
-    --brilho: rgba(139, 92, 246, 0.55);
+    --fundo: #0a0d10;
+    --fundo-2: #11181e;
+    --cartao: #13191f;
+    --cartao-hover: #19222a;
+    --borda: #26313a;
+    --borda-forte: #3c4b57;
+    --texto: #f2ece1;
+    --suave: #b2bcc4;
+    --fraco: #7c8994;
+
+    /* paleta artística: carmesim (bordo/anime) + ouro quente (lampião/estrelas) */
+    --roxo: #d94141;
+    --roxo-claro: #f2b84b;
+    --roxo-fundo: rgba(217, 65, 65, 0.13);
+    --brilho: rgba(242, 184, 75, 0.38);
+    --ouro: #f2b84b;
+    --ouro-fundo: rgba(242, 184, 75, 0.12);
+    --petroleo: #234952;
+
     --verde: #4ade80;
     --vermelho: #f87171;
-    --amarelo: #fbbf24;
+    --amarelo: #f2b84b;
 
     --titulo: "Space Grotesk", system-ui, sans-serif;
     --corpo: "Inter", system-ui, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, monospace;
 
-    --raio: 14px;
+    --raio: 10px;
     --largura: 1120px;
     --lateral: 64px;
     --topo-altura: 68px;
@@ -45,13 +52,51 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topo-altura) + 16
 
 body {
     margin: 0;
-    background: var(--fundo);
+    background:
+        radial-gradient(ellipse 80% 50% at 75% 8%, rgba(35, 73, 82, 0.28), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 15% 45%, rgba(217, 65, 65, 0.08), transparent 55%),
+        var(--fundo);
     color: var(--texto);
     font-family: var(--corpo);
     font-size: 16px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
+
+/* textura sutil de papel/tinta sobre o fundo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.atmosfera {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.barra-progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 50;
+    background: linear-gradient(90deg, var(--roxo), var(--ouro));
+    transform-origin: left;
+    transform: scaleX(var(--progresso, 0));
+}
+
+main, .rodape { position: relative; z-index: 2; }
 
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -225,7 +270,14 @@ main, .rodape { margin-left: var(--lateral); }
     letter-spacing: 0.02em;
     margin-bottom: 48px;
 }
-.titulo-secao span { color: var(--roxo); }
+.titulo-secao .capitulo {
+    display: block;
+    font: 600 0.78rem var(--mono);
+    letter-spacing: 0.16em;
+    color: var(--roxo);
+    margin-bottom: 8px;
+}
+.titulo-secao span:not(.capitulo) { color: var(--ouro); }
 
 .secao-intro {
     text-align: center;
@@ -312,10 +364,10 @@ main, .rodape { margin-left: var(--lateral); }
     aspect-ratio: 1;
     border-radius: 50%;
     padding: 6px;
-    background: conic-gradient(from 210deg, var(--roxo), var(--roxo-claro), #6d28d9, var(--roxo));
+    background: conic-gradient(from 210deg, var(--roxo), var(--ouro), #234952, var(--roxo));
     box-shadow:
-        0 0 40px 4px var(--brilho),
-        0 0 110px 20px rgba(139, 92, 246, 0.22);
+        0 0 36px 2px var(--brilho),
+        0 0 100px 18px rgba(217, 65, 65, 0.18);
     animation: respirar 6s ease-in-out infinite;
 }
 
@@ -329,8 +381,8 @@ main, .rodape { margin-left: var(--lateral); }
 }
 
 @keyframes respirar {
-    0%, 100% { box-shadow: 0 0 40px 4px var(--brilho), 0 0 110px 20px rgba(139, 92, 246, 0.22); }
-    50% { box-shadow: 0 0 52px 8px var(--brilho), 0 0 140px 30px rgba(139, 92, 246, 0.28); }
+    0%, 100% { box-shadow: 0 0 36px 2px var(--brilho), 0 0 100px 18px rgba(217, 65, 65, 0.18); }
+    50% { box-shadow: 0 0 50px 6px var(--brilho), 0 0 125px 26px rgba(242, 184, 75, 0.22); }
 }
 
 /* ---------------- botões ---------------- */
@@ -354,9 +406,10 @@ main, .rodape { margin-left: var(--lateral); }
 .botao-primario {
     background: var(--roxo);
     color: #fff;
-    box-shadow: 0 6px 24px -6px var(--brilho);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 4px 4px 0 rgba(242, 184, 75, 0.35);
 }
-.botao-primario:hover { background: #7c4def; box-shadow: 0 10px 30px -6px var(--brilho); }
+.botao-primario:hover { background: #c53636; box-shadow: 6px 6px 0 rgba(242, 184, 75, 0.55); }
 
 .botao-contorno {
     background: transparent;
@@ -506,15 +559,15 @@ main, .rodape { margin-left: var(--lateral); }
     display: flex;
     flex-direction: column;
     background: var(--cartao);
-    border: 1px solid var(--borda);
+    border: 1.5px solid var(--borda-forte);
     border-radius: var(--raio);
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 .projeto:hover {
-    border-color: var(--borda-forte);
-    transform: translateY(-4px);
-    box-shadow: 0 18px 40px -20px rgba(139, 92, 246, 0.35);
+    border-color: var(--ouro);
+    transform: translate(-2px, -3px);
+    box-shadow: 6px 6px 0 rgba(217, 65, 65, 0.38);
 }
 .projeto[hidden] { display: none; }
 
@@ -581,7 +634,7 @@ main, .rodape { margin-left: var(--lateral); }
     padding: 32px;
     border-bottom: none;
     border-right: 1px solid var(--borda);
-    background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.22), transparent 65%), var(--fundo-2);
+    background: radial-gradient(circle at 30% 30%, rgba(242, 184, 75, 0.14), rgba(35, 73, 82, 0.2) 45%, transparent 72%), var(--fundo-2);
 }
 .projeto-destaque .projeto-imagem img {
     height: auto;
@@ -879,10 +932,10 @@ main, .rodape { margin-left: var(--lateral); }
     overflow: hidden;
     text-align: center;
     padding: 64px 32px;
-    border: 1px solid var(--borda);
-    border-radius: 22px;
+    border: 1.5px solid var(--borda-forte);
+    border-radius: 18px;
     background:
-        radial-gradient(ellipse at top, rgba(139, 92, 246, 0.22), transparent 65%),
+        radial-gradient(ellipse at top, rgba(242, 184, 75, 0.14), rgba(217, 65, 65, 0.08) 45%, transparent 70%),
         var(--cartao);
 }
 .contato-cartao h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px; }

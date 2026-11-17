@@ -15,7 +15,7 @@
     <meta property="og:image:height" content="627">
     <meta property="og:image:alt" content="João Pedro Lima de Jesus, Desenvolvedor Backend e IA aplicada, aberto a estágio">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#0b0a10">
+    <meta name="theme-color" content="#0a0d10">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -24,6 +24,8 @@
 </head>
 <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <div class="barra-progresso" aria-hidden="true"></div>
+    <canvas class="atmosfera" id="atmosfera" aria-hidden="true"></canvas>
 
     <!-- Barra lateral fixa com os contatos (some no celular) -->
     <aside class="lateral" aria-label="Links rápidos">
@@ -94,7 +96,7 @@
 
         <!-- SOBRE -->
         <section class="secao" id="sobre">
-            <h2 class="titulo-secao">Sobre <span>mim</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">01 //</span> Sobre <span>mim</span></h2>
             <div class="sobre-grade">
                 <div class="sobre-texto revelar">
                     <p>
@@ -136,7 +138,7 @@
 
         <!-- HABILIDADES -->
         <section class="secao" id="habilidades">
-            <h2 class="titulo-secao">Minhas <span>habilidades</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">02 //</span> Minhas <span>habilidades</span></h2>
             <p class="secao-intro">Separei o que já usei em projetos do que ainda estou estudando.</p>
 
             <div class="habilidades-grade">
@@ -218,7 +220,7 @@
 
         <!-- PROJETOS -->
         <section class="secao" id="projetos">
-            <h2 class="titulo-secao">Meus <span>projetos</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">03 //</span> Meus <span>projetos</span></h2>
 
             <div class="filtros" role="group" aria-label="Filtrar projetos por tecnologia">
                 <button class="filtro ativo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
@@ -447,7 +449,7 @@
 
         <!-- EVENTOS -->
         <section class="secao" id="eventos">
-            <h2 class="titulo-secao">Participações em <span>eventos</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">04 //</span> Participações em <span>eventos</span></h2>
             <div class="certificados-grade">
                 <article class="lt-cartao evento revelar">
                     <p class="projeto-rotulo">Hackathon · 2024</p>
@@ -480,7 +482,7 @@
 
         <!-- TRAJETÓRIA -->
         <section class="secao" id="trajetoria">
-            <h2 class="titulo-secao">Minha <span>trajetória</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">05 //</span> Minha <span>trajetória</span></h2>
             <ol class="linha-tempo" role="list">
                 <li class="revelar">
                     <span class="lt-data">nov/2026</span>
@@ -529,7 +531,7 @@
 
         <!-- CERTIFICAÇÕES -->
         <section class="secao" id="certificacoes">
-            <h2 class="titulo-secao">Cursos e <span>certificações</span></h2>
+            <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">06 //</span> Cursos e <span>certificações</span></h2>
             <div class="certificados-grade">
                 <div class="certificado cert-google revelar">
                     <h3>Google Cloud</h3>
