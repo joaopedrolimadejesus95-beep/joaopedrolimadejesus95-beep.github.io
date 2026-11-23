@@ -70,9 +70,7 @@
                 <h1>Olá, eu sou <span class="destaque">João Pedro</span><span class="visually-hidden"> — </span><span class="cargo">Desenvolvedor Backend e IA aplicada</span></h1>
                 <p class="hero-descricao">
                     Estudo Ciência da Computação na UTFPR e coloquei em produção o <strong>Vendly</strong>,
-                    um agente de IA no WhatsApp que recebe pedidos de restaurantes, confere o cardápio
-                    real e manda a comanda pra cozinha. Também desenvolvi o <strong>ATLAS</strong> (Red Team para SaaS e IA) e co-criei o <strong>AgroShield</strong> (responsável pelo backend, IA determinística e gateway SMS 2G offline). Trabalho com <strong>Node.js, TypeScript, PostgreSQL, Docker e IA</strong>,
-                    integrando LLMs a sistemas reais com segurança e travas determinísticas.
+                    um agente de IA no WhatsApp para restaurantes. Também criei o <strong>AI Office Studio</strong> (orquestração multiagente em DAG), o <strong>ATLAS</strong> (Red Team para SaaS e IA), o <strong>CommitGuard</strong> (code review automatizado de segurança) e co-criei o <strong>AgroShield</strong> (decisão agronômica com satélites da NASA e SMS 2G). Trabalho com <strong>Node.js, TypeScript, Python, PostgreSQL, Docker e IA</strong> com foco em segurança e travas determinísticas.
                 </p>
                 <div class="hero-acoes">
                     <a class="botao botao-primario" href="assets/docs/curriculo-joao-pedro-lima.pdf" download>
@@ -275,7 +273,55 @@
                 </div>
             </article>
 
-            <!-- Segundo destaque: o red team do Vendly -->
+            <!-- Segundo destaque: AI Office Studio -->
+            <article class="projeto projeto-destaque revelar" id="ai-office" data-tags="node ia seguranca">
+                <a class="projeto-imagem projeto-capa capa-dag" href="https://escritorio-de-agentes-ten.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <div class="dag-painel">
+                        <span class="dag-badge">DAG · Quality Gates · AES-256-GCM</span>
+                        <div class="dag-fluxo">
+                            <span class="dag-no">Diretor DAG</span>
+                            <span class="dag-seta">→</span>
+                            <span class="dag-no">5 Agentes + Zod</span>
+                            <span class="dag-seta">→</span>
+                            <span class="dag-no dag-ativo">Aprovação</span>
+                        </div>
+                        <span class="dag-rodape">Socket.io · React Three Fiber · Anti-SSRF</span>
+                    </div>
+                </a>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">Orquestração Multiagente · 3D &amp; AppSec</p>
+                    <h3>AI Office Studio</h3>
+                    <p class="projeto-descricao">
+                        Escritório 3D multiagente: você envia o escopo de um produto e 5 agentes especializados
+                        (Diretor, Pesquisa, Arquitetura, Design e Growth) executam um plano em DAG com
+                        validação determinística e <em>quality gates</em> para aprovação humana.
+                    </p>
+                    <div class="arquitetura-fluxo" aria-label="Arquitetura do AI Office Studio">
+                        <span class="arq-titulo">Fluxo Multiagente:</span>
+                        <code>Diretor (DAG)</code>
+                        <span aria-hidden="true">→</span>
+                        <code>Validação Zod</code>
+                        <span aria-hidden="true">→</span>
+                        <code>Socket.io (3D)</code>
+                        <span aria-hidden="true">→</span>
+                        <code>PostgreSQL / PGlite</code>
+                    </div>
+                    <ul class="projeto-pontos" role="list">
+                        <li><strong>Orquestração em DAG com auto-correção:</strong> cada entrega passa por schema Zod e regras de domínio antes de liberar o próximo departamento, com retomada sem perder progresso</li>
+                        <li><strong>Segurança desde a arquitetura:</strong> API keys criptografadas com <strong>AES-256-GCM</strong>, cookie <code>HttpOnly</code> com <code>scrypt</code>, proteção <strong>anti-SSRF</strong>, <em>rate limiting</em> e preview em <code>iframe sandbox</code></li>
+                        <li><strong>Multi-provedor e tempo real:</strong> suporte a Gemini, Anthropic, OpenAI e Ollama local, acompanhando o status dos agentes em cena 3D com React Three Fiber</li>
+                    </ul>
+                    <ul class="etiquetas" role="list">
+                        <li>Node.js</li><li>TypeScript</li><li>Socket.io</li><li>Zod</li><li>PostgreSQL</li><li>React Three Fiber</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a class="botao botao-primario botao-pequeno" href="https://escritorio-de-agentes-ten.vercel.app" target="_blank" rel="noopener" aria-label="Ver no ar o AI Office Studio">Ver no ar</a>
+                        <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/escritorio-de-agentes" target="_blank" rel="noopener" aria-label="Código do AI Office Studio no GitHub">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Terceiro destaque: o red team do Vendly -->
             <article class="projeto projeto-destaque revelar" id="atlas" data-tags="node seguranca ia">
                 <a class="projeto-imagem" href="atlas-painel.html" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
                     <img src="assets/img/atlas-v2.svg" width="1280" height="800" alt="Painel executivo do ATLAS v2 mostrando 16 de 16 sondas defendidas" loading="lazy">
@@ -308,6 +354,47 @@
                     <div class="projeto-links">
                         <a class="botao botao-primario botao-pequeno" href="atlas-painel.html" target="_blank" rel="noopener">Ver painel ao vivo</a>
                         <a class="botao botao-contorno botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Atlas" target="_blank" rel="noopener" aria-label="Código do ATLAS no GitHub">Código</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Quarto destaque: CommitGuard -->
+            <article class="projeto projeto-destaque revelar" id="commitguard" data-tags="python ia seguranca">
+                <a class="projeto-imagem projeto-capa capa-atlas" href="https://github.com/joaopedrolimadejesus95-beep/Commit-Guard" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <pre>$ python main.py --fail-on alta
+<span class="c-alerta">[diff]</span> src/orders.ts (+42 / -8)
+<span class="c-erro">[ALTA · Segurança]</span> SQL concatenado na linha 28
+<span class="c-alerta">[MEDIA · Performance]</span> Query N+1 dentro do loop
+<span class="c-ok">[CI Gate]</span> PR comentado e bloqueado (exit 1)</pre>
+                </a>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">DevSecOps &amp; Code Review Automatizado</p>
+                    <h3>CommitGuard</h3>
+                    <p class="projeto-descricao">
+                        Ferramenta CLI e workflow de GitHub Actions que analisa o <code>git diff</code> dos commits
+                        com Google Gemini em JSON Schema buscando falhas reais de segurança, arquitetura e performance
+                        antes do código ir para produção.
+                    </p>
+                    <div class="arquitetura-fluxo" aria-label="Pipeline do CommitGuard">
+                        <span class="arq-titulo">Pipeline CI/CD:</span>
+                        <code>git diff</code>
+                        <span aria-hidden="true">→</span>
+                        <code>Filtro de Código</code>
+                        <span aria-hidden="true">→</span>
+                        <code>Gemini (JSON Schema)</code>
+                        <span aria-hidden="true">→</span>
+                        <code>Comentário &amp; Gate no PR</code>
+                    </div>
+                    <ul class="projeto-pontos" role="list">
+                        <li><strong>Análise focada no que quebra produção:</strong> detecta SQL Injection, XSS, vazamento de chaves, Prompt Injection, consultas N+1 e falhas de tratamento de erro indicando linha e correção</li>
+                        <li><strong>Pronto para CI/CD no GitHub Actions:</strong> comenta o relatório diretamente no Pull Request e bloqueia o merge automaticamente via <code>--fail-on alta</code></li>
+                        <li><strong>Multi-linguagem via CLI:</strong> filtra alterações em Python, Java, JS/TS, SQL e configs com exportação estruturada em Markdown e JSON</li>
+                    </ul>
+                    <ul class="etiquetas" role="list">
+                        <li>Python</li><li>API do Gemini</li><li>JSON Schema</li><li>GitHub Actions</li><li>AppSec</li>
+                    </ul>
+                    <div class="projeto-links">
+                        <a class="botao botao-primario botao-pequeno" href="https://github.com/joaopedrolimadejesus95-beep/Commit-Guard" target="_blank" rel="noopener" aria-label="Código do CommitGuard no GitHub">Ver código e Action</a>
                     </div>
                 </div>
             </article>
@@ -349,34 +436,32 @@
                 </div>
             </article>
 
-            <article class="projeto projeto-destaque revelar" data-tags="java">
-                <div class="projeto-imagem projeto-capa capa-mentora" aria-hidden="true">
-                    <div class="capa-streak">
-                        <span class="capa-numero">Java 21</span>
-                        <span class="capa-legenda">Controller → Service → DAO</span>
-                        <div class="capa-tags-mini">
-                            <span>Spring Boot</span>
-                            <span>JDBC + SQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="projeto-corpo">
-                    <p class="projeto-rotulo">Back-end Java · Arquitetura em camadas</p>
-                    <h3>Mentora</h3>
-                    <p class="projeto-descricao">
-                        App de hábitos e estudos com streak calculado a partir do histórico real de cumprimento,
-                        níveis e XP. Arquitetura em camadas Controller → Service → DAO com SQL puro via JDBC.
-                    </p>
-                    <ul class="etiquetas" role="list"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Thymeleaf</li></ul>
-                    <div class="projeto-links">
-                        <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo" target="_blank" rel="noopener" aria-label="Código do Mentora no GitHub">Código</a>
-                    </div>
-                </div>
-            </article>
-
             <div class="outros-projetos">
                 <h3 class="outros-titulo">Outros projetos de estudo</h3>
                 <div class="outros-lista">
+                    <article class="projeto projeto-compacto revelar" data-tags="java">
+                        <div class="projeto-compacto-info">
+                            <h4>Mentora</h4>
+                            <p>App de hábitos e estudos com cálculo de streak e XP em Java 21, Spring Boot e SQL puro via JDBC (Controller → Service → DAO).</p>
+                        </div>
+                        <ul class="etiquetas" role="list"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo" target="_blank" rel="noopener" aria-label="Código do Mentora no GitHub">Código</a>
+                        </div>
+                    </article>
+
+                    <article class="projeto projeto-compacto revelar" data-tags="node javascript">
+                        <div class="projeto-compacto-info">
+                            <h4>NectarNotes</h4>
+                            <p>Plataforma temática de música em Node.js com autenticação, playlists, pet virtual e persistência em SQLite.</p>
+                        </div>
+                        <ul class="etiquetas" role="list"><li>Node.js</li><li>SQLite</li><li>JavaScript</li></ul>
+                        <div class="projeto-links">
+                            <a class="link-seta" href="https://nectar-notes-flax.vercel.app" target="_blank" rel="noopener" aria-label="Ver no ar o NectarNotes">Ver no ar</a>
+                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/Nectar-Notes" target="_blank" rel="noopener" aria-label="Código do NectarNotes no GitHub">Código</a>
+                        </div>
+                    </article>
+
                     <article class="projeto projeto-compacto revelar" data-tags="javascript java">
                         <div class="projeto-compacto-info">
                             <h4>Sistema Acadêmico Web</h4>
@@ -453,6 +538,13 @@
         <section class="secao" id="trajetoria">
             <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">05 //</span> Minha <span>trajetória</span></h2>
             <ol class="linha-tempo" role="list">
+                <li class="revelar">
+                    <span class="lt-data">nov/2026</span>
+                    <div class="lt-cartao">
+                        <h3>AI Office Studio &amp; CommitGuard</h3>
+                        <p>Orquestração multiagente em DAG com criptografia AES-256-GCM e proteção anti-SSRF (AI Office Studio), além de revisor automático de segurança em Pull Requests no GitHub Actions (CommitGuard).</p>
+                    </div>
+                </li>
                 <li class="revelar">
                     <span class="lt-data">nov/2026</span>
                     <div class="lt-cartao">

@@ -13,7 +13,7 @@ Meu site pessoal de desenvolvedor: quem sou, o que estou construindo e onde conf
 | **Início** | Apresentação, currículo em PDF e links de contato |
 | **Sobre mim** | Formação, o que me interessa e como cheguei até aqui |
 | **Habilidades** | Separadas entre o que já usei em projetos e o que estou estudando (AWS, Cibersegurança, MCP, Engenharia de Prompts) |
-| **Projetos** | Vendly, ATLAS, AgroShield e Mentora em destaque, além de outros projetos de estudo (Sistema Acadêmico, Genius IA e Algoritmos JS), com filtro por tecnologia |
+| **Projetos** | Vendly, AI Office Studio, ATLAS, CommitGuard e AgroShield em destaque, mais outros projetos de estudo (Mentora, NectarNotes, Sistema Acadêmico, Genius IA e Algoritmos JS), com filtro por tecnologia |
 | **Eventos** | NASA Space Apps Challenge (2024 e 2026 · AgroShield) e Ideathon Sebrae |
 | **Trajetória** | Linha do tempo: curso técnico, Havan, UTFPR, Vendly e AgroShield |
 | **Certificações** | Anthropic (MCP), DIO (AWS Cibersegurança, Engenharia de Prompts, IA), Google Cloud, Tera e Alura |

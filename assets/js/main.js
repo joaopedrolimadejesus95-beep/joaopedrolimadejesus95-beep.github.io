@@ -184,6 +184,7 @@ secoes.forEach((secao) => secao && observadorSecao.observe(secao));
 
 const filtros = document.querySelectorAll(".filtro");
 const projetos = document.querySelectorAll(".projeto");
+const outrosProjetos = document.querySelector(".outros-projetos");
 const avisoVazio = document.querySelector(".filtro-vazio");
 
 filtros.forEach((botao) => {
@@ -197,16 +198,19 @@ filtros.forEach((botao) => {
         });
 
         let visiveis = 0;
+        let outrosVisiveis = 0;
         projetos.forEach((projeto) => {
             const tags = projeto.dataset.tags.split(" ");
             const mostrar = escolhido === "todos" || tags.includes(escolhido);
             projeto.hidden = !mostrar;
             if (mostrar) {
                 visiveis++;
+                if (projeto.classList.contains("projeto-compacto")) outrosVisiveis++;
                 projeto.classList.add("visivel"); // garante que não fique invisível pela animação
             }
         });
 
+        if (outrosProjetos) outrosProjetos.hidden = outrosVisiveis === 0;
         avisoVazio.hidden = visiveis > 0;
     });
 });
