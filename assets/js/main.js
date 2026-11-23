@@ -210,7 +210,10 @@ filtros.forEach((botao) => {
             }
         });
 
-        if (outrosProjetos) outrosProjetos.hidden = outrosVisiveis === 0;
+        if (outrosProjetos) {
+            outrosProjetos.hidden = outrosVisiveis === 0;
+            outrosProjetos.open = escolhido !== "todos" && outrosVisiveis > 0;
+        }
         avisoVazio.hidden = visiveis > 0;
     });
 });

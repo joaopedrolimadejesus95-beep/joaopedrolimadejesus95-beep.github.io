@@ -707,8 +707,9 @@ main, .rodape { margin-left: var(--lateral); }
 
 .projetos-grade {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    margin-bottom: 12px;
 }
 
 .filtro-vazio { text-align: center; color: var(--suave); margin-top: 24px; }
@@ -732,19 +733,34 @@ main, .rodape { margin-left: var(--lateral); }
 }
 
 .outros-projetos {
-    margin-top: 40px;
-    padding-top: 28px;
+    margin-top: 32px;
+    padding-top: 24px;
     border-top: 1px solid var(--borda);
 }
+.outros-projetos[hidden] { display: none; }
 .outros-titulo {
-    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--suave);
-    margin-bottom: 16px;
     font-family: var(--mono);
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    background: var(--cartao);
+    transition: border-color 0.2s, color 0.2s;
 }
+.outros-titulo::-webkit-details-marker { display: none; }
+.outros-titulo::after { content: "▾"; color: var(--ouro); transition: transform 0.2s; }
+.outros-projetos[open] .outros-titulo { margin-bottom: 16px; border-color: var(--borda-forte); color: var(--texto); }
+.outros-projetos[open] .outros-titulo::after { transform: rotate(180deg); }
+.outros-titulo:hover { border-color: var(--ouro); color: var(--texto); }
 .outros-lista {
     display: flex;
     flex-direction: column;
@@ -990,6 +1006,7 @@ main, .rodape { margin-left: var(--lateral); }
     .habilidades-grade { grid-template-columns: 1fr; }
     .projeto-destaque { grid-template-columns: 1fr; }
     .projeto-destaque .projeto-imagem { padding: 20px; border-right: none; border-bottom: 1px solid var(--borda); }
+    .projetos-grade { grid-template-columns: 1fr; }
     .certificados-grade,
     #certificacoes .certificados-grade { grid-template-columns: 1fr; }
     #certificacoes .certificado:nth-child(-n + 3),
