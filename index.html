@@ -117,9 +117,9 @@
                         No <strong>NASA Space Apps Challenge 2026</strong>, co-criei o <strong>AgroShield</strong> — assumindo o backend, as travas determinísticas da IA e o gateway SMS 2G — para cruzar dados de satélites da NASA com manuais da EMBRAPA e responder o produtor rural mesmo sem internet.
                     </p>
                     <p>
-                        Agora estou construindo o <strong>Radar de Vagas</strong>, uma automação com LLM que busca vagas
-                        de estágio e as compara com o meu currículo. É onde estou aprendendo n8n, busca por
-                        similaridade (RAG), avaliação de LLMs e AWS.
+                        Atualmente venho aprofundando meus estudos em nuvem (<strong>AWS</strong>),
+                        <strong>cibersegurança</strong>, <strong>Engenharia de Prompts</strong> e no protocolo
+                        <strong>MCP (Model Context Protocol)</strong> — conectando modelos de IA a ferramentas e dados reais com previsibilidade.
                     </p>
                     <p>
                         Antes da programação, trabalhei um ano como jovem aprendiz na Havan, atendendo cliente.
@@ -208,11 +208,11 @@
                     </h3>
                     <ul class="tecnologias" role="list">
                         <li><span class="icone-texto" aria-hidden="true">AWS</span>AWS Cloud</li>
-                        <li><span class="icone-texto" aria-hidden="true">LLM</span>LLMs &amp; Agentes</li>
-                        <li><span class="icone-texto" aria-hidden="true">n8n</span>n8n Workflows</li>
+                        <li><span class="icone-texto" aria-hidden="true">SEC</span>Cibersegurança</li>
+                        <li><span class="icone-texto" aria-hidden="true">MCP</span>Model Context Protocol</li>
+                        <li><span class="icone-texto" aria-hidden="true">LLM</span>Engenharia de Prompts</li>
+                        <li><span class="icone-texto" aria-hidden="true">AI</span>LLMs &amp; Agentes</li>
                         <li><span class="icone-texto" aria-hidden="true">API</span>Postman</li>
-                        <li><span class="icone-texto" aria-hidden="true">RAG</span>RAG com pgvector</li>
-                        <li><span class="icone-texto" aria-hidden="true">✓</span>Avaliação de agentes</li>
                     </ul>
                 </div>
             </div>
@@ -349,61 +349,30 @@
                 </div>
             </article>
 
-            <div class="projetos-grade">
-                <article class="projeto revelar" data-tags="ia node">
-                    <div class="projeto-imagem projeto-capa capa-radar" aria-hidden="true">
-                        <div class="radar-fluxo">
-                            <span class="radar-etapa">n8n Ingest</span>
-                            <span class="radar-seta">→</span>
-                            <span class="radar-etapa">pgvector RAG</span>
-                            <span class="radar-seta">→</span>
-                            <span class="radar-etapa radar-destaque">LLM Evals</span>
+            <article class="projeto projeto-destaque revelar" data-tags="java">
+                <div class="projeto-imagem projeto-capa capa-mentora" aria-hidden="true">
+                    <div class="capa-streak">
+                        <span class="capa-numero">Java 21</span>
+                        <span class="capa-legenda">Controller → Service → DAO</span>
+                        <div class="capa-tags-mini">
+                            <span>Spring Boot</span>
+                            <span>JDBC + SQL</span>
                         </div>
                     </div>
-                    <div class="projeto-corpo">
-                        <p class="selo-andamento">Em desenvolvimento · out/2026</p>
-                        <h3>Radar de Vagas</h3>
-                        <p class="projeto-descricao">
-                            Automação que coleta vagas de estágio e TI de fontes públicas, usa um LLM para
-                            compará-las com o meu currículo e prioriza as que mais combinam.
-                        </p>
-                        <ul class="projeto-pontos" role="list">
-                            <li>Fluxo no n8n, com a saída do LLM em JSON estruturado</li>
-                            <li>Busca por similaridade (RAG) com embeddings no PostgreSQL (pgvector)</li>
-                            <li>Conjunto fixo de vagas classificadas à mão para medir o acerto do ranking (evals)</li>
-                            <li>Próximo passo: execução agendada na AWS (Lambda, S3 e CloudWatch)</li>
-                        </ul>
-                        <ul class="etiquetas" role="list"><li>n8n</li><li>Node.js</li><li>PostgreSQL</li><li>AWS</li></ul>
-                        <div class="projeto-links">
-                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep" target="_blank" rel="noopener" aria-label="Acompanhar no GitHub o desenvolvimento do Radar de Vagas">Acompanhar no GitHub</a>
-                        </div>
+                </div>
+                <div class="projeto-corpo">
+                    <p class="projeto-rotulo">Back-end Java · Arquitetura em camadas</p>
+                    <h3>Mentora</h3>
+                    <p class="projeto-descricao">
+                        App de hábitos e estudos com streak calculado a partir do histórico real de cumprimento,
+                        níveis e XP. Arquitetura em camadas Controller → Service → DAO com SQL puro via JDBC.
+                    </p>
+                    <ul class="etiquetas" role="list"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Thymeleaf</li></ul>
+                    <div class="projeto-links">
+                        <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo" target="_blank" rel="noopener" aria-label="Código do Mentora no GitHub">Código</a>
                     </div>
-                </article>
-
-                <article class="projeto revelar" data-tags="java">
-                    <div class="projeto-imagem projeto-capa capa-mentora" aria-hidden="true">
-                        <div class="capa-streak">
-                            <span class="capa-numero">Java 21</span>
-                            <span class="capa-legenda">Controller → Service → DAO</span>
-                            <div class="capa-tags-mini">
-                                <span>Spring Boot</span>
-                                <span>JDBC + SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projeto-corpo">
-                        <h3>Mentora</h3>
-                        <p class="projeto-descricao">
-                            App de hábitos e estudos com streak calculado a partir do histórico real de cumprimento,
-                            níveis e XP. Arquitetura em camadas Controller → Service → DAO com SQL puro via JDBC.
-                        </p>
-                        <ul class="etiquetas" role="list"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Thymeleaf</li></ul>
-                        <div class="projeto-links">
-                            <a class="link-seta" href="https://github.com/joaopedrolimadejesus95-beep/MentoraPrototipo" target="_blank" rel="noopener" aria-label="Código do Mentora no GitHub">Código</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
+                </div>
+            </article>
 
             <div class="outros-projetos">
                 <h3 class="outros-titulo">Outros projetos de estudo</h3>
@@ -533,16 +502,30 @@
         <section class="secao" id="certificacoes">
             <h2 class="titulo-secao"><span class="capitulo" aria-hidden="true">06 //</span> Cursos e <span>certificações</span></h2>
             <div class="certificados-grade">
+                <div class="certificado cert-anthropic revelar">
+                    <h3>Anthropic</h3>
+                    <ul role="list">
+                        <li>Claude Academy: Introduction to Model Context Protocol <span>nov/2026 · Credencial 56da615fd568a17728fce1540c21f1a1</span></li>
+                    </ul>
+                </div>
+                <div class="certificado cert-dio revelar">
+                    <h3>DIO</h3>
+                    <ul role="list">
+                        <li>Boas-vindas ao Bootcamp AWS - Cibersegurança <span>nov/2026</span></li>
+                        <li>Introdução à Engenharia de Prompts <span>nov/2026</span></li>
+                        <li>Fundamentos da IA Moderna <span>jun/2026</span></li>
+                    </ul>
+                </div>
                 <div class="certificado cert-google revelar">
                     <h3>Google Cloud</h3>
                     <ul role="list">
                         <li>Capacita+ Construa com Gemini <span>set/2026</span></li>
                     </ul>
                 </div>
-                <div class="certificado cert-dio revelar">
-                    <h3>DIO</h3>
+                <div class="certificado cert-tera revelar">
+                    <h3>Tera</h3>
                     <ul role="list">
-                        <li>Fundamentos da IA Moderna <span>jun/2026</span></li>
+                        <li>Digital Product Week 2026 <span>out/2026</span></li>
                     </ul>
                 </div>
                 <div class="certificado cert-alura revelar">

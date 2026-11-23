@@ -631,11 +631,13 @@ main, .rodape { margin-left: var(--lateral); }
     aspect-ratio: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 32px;
     border-bottom: none;
     border-right: 1px solid var(--borda);
     background: radial-gradient(circle at 30% 30%, rgba(242, 184, 75, 0.14), rgba(35, 73, 82, 0.2) 45%, transparent 72%), var(--fundo-2);
 }
+.projeto-destaque .projeto-capa { min-height: 220px; }
 .projeto-destaque .projeto-imagem img {
     height: auto;
     aspect-ratio: 16 / 10;
@@ -673,8 +675,8 @@ main, .rodape { margin-left: var(--lateral); }
 .arquitetura-fluxo code {
     font-family: var(--mono);
     color: var(--texto);
-    background: rgba(139, 92, 246, 0.14);
-    border: 1px solid rgba(139, 92, 246, 0.28);
+    background: var(--roxo-fundo);
+    border: 1px solid rgba(242, 184, 75, 0.28);
     padding: 2px 7px;
     border-radius: 5px;
 }
@@ -715,7 +717,7 @@ main, .rodape { margin-left: var(--lateral); }
 
 .projeto-capa { display: grid; place-items: center; }
 
-.capa-mentora { background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.25), transparent 60%), var(--fundo-2); }
+.capa-mentora { background: radial-gradient(circle at 30% 30%, rgba(242, 184, 75, 0.16), rgba(35, 73, 82, 0.24) 50%, transparent 72%), var(--fundo-2); }
 .capa-streak { text-align: center; }
 .capa-numero { display: block; font: 700 2.1rem/1.1 var(--titulo); color: var(--texto); }
 .capa-legenda { display: block; font: 500 0.82rem var(--mono); color: var(--roxo-claro); margin: 8px 0 14px; }
@@ -772,32 +774,6 @@ main, .rodape { margin-left: var(--lateral); }
     padding-top: 0;
     flex-shrink: 0;
 }
-
-.capa-radar {
-    background: radial-gradient(circle at 70% 30%, rgba(251, 191, 36, 0.14), rgba(139, 92, 246, 0.22) 45%, transparent 70%), var(--fundo-2);
-    padding: 20px;
-}
-.radar-fluxo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font: 600 0.78rem var(--mono);
-}
-.radar-etapa {
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: var(--cartao);
-    border: 1px solid var(--borda-forte);
-    color: var(--texto);
-}
-.radar-etapa.radar-destaque {
-    border-color: var(--roxo);
-    background: var(--roxo-fundo);
-    color: var(--roxo-claro);
-}
-.radar-seta { color: var(--roxo-claro); }
 
 .capa-atlas { background: #0d0c12; padding: 20px; }
 .capa-atlas pre {
@@ -900,15 +876,25 @@ main, .rodape { margin-left: var(--lateral); }
     align-items: start;
 }
 
+#certificacoes .certificados-grade {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: stretch;
+}
+#certificacoes .certificado:nth-child(-n + 3) { grid-column: span 2; }
+#certificacoes .certificado:nth-child(n + 4) { grid-column: span 3; }
+
 .certificado {
     background: var(--cartao);
     border: 1px solid var(--borda);
     border-top: 3px solid var(--cor, var(--roxo));
     border-radius: var(--raio);
     padding: 24px;
+    word-break: break-word;
 }
+.cert-anthropic { --cor: #e07a5f; }
 .cert-google { --cor: #4285f4; }
 .cert-dio { --cor: #e4405f; }
+.cert-tera { --cor: #10b981; }
 .cert-alura { --cor: #3b82f6; }
 
 .certificado h3 {
@@ -986,7 +972,7 @@ main, .rodape { margin-left: var(--lateral); }
         flex-direction: column;
         gap: 0;
         padding: 8px 16px 16px;
-        background: rgba(11, 10, 16, 0.97);
+        background: rgba(10, 13, 16, 0.97);
         border-bottom: 1px solid var(--borda);
         display: none;
     }
@@ -1004,7 +990,10 @@ main, .rodape { margin-left: var(--lateral); }
     .habilidades-grade { grid-template-columns: 1fr; }
     .projeto-destaque { grid-template-columns: 1fr; }
     .projeto-destaque .projeto-imagem { padding: 20px; border-right: none; border-bottom: 1px solid var(--borda); }
-    .certificados-grade { grid-template-columns: 1fr; }
+    .certificados-grade,
+    #certificacoes .certificados-grade { grid-template-columns: 1fr; }
+    #certificacoes .certificado:nth-child(-n + 3),
+    #certificacoes .certificado:nth-child(n + 4) { grid-column: auto; }
 }
 
 @media (max-width: 720px) {
