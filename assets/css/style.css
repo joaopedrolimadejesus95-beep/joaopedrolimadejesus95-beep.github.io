@@ -1,7 +1,7 @@
 /* ==========================================================
    Portfólio · João Pedro Lima de Jesus
-   Atmosfera "Noite de Tinta, Bordo & Lampião"
-   Petróleo noturno, marfim de papel, carmesim de bordo e ouro de lampião.
+   Atmosfera "Noite de Sakura, Lua & Cidade Roxa"
+   Violeta noturno, lavanda luminosa e rosa sakura.
    ========================================================== */
 
 @font-face { font-family: "Space Grotesk"; font-weight: 500; font-display: swap; src: url("../fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
@@ -13,34 +13,36 @@
 @font-face { font-family: "JetBrains Mono"; font-weight: 600; font-display: swap; src: url("../fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2"); }
 
 :root {
-    --fundo: #0a0d10;
-    --fundo-2: #11181e;
-    --cartao: #13191f;
-    --cartao-hover: #19222a;
-    --borda: #26313a;
-    --borda-forte: #3c4b57;
-    --texto: #f2ece1;
-    --suave: #b2bcc4;
-    --fraco: #7c8994;
+    color-scheme: dark;
 
-    /* paleta artística: carmesim (bordo/anime) + ouro quente (lampião/estrelas) */
-    --roxo: #d94141;
-    --roxo-claro: #f2b84b;
-    --roxo-fundo: rgba(217, 65, 65, 0.13);
-    --brilho: rgba(242, 184, 75, 0.38);
-    --ouro: #f2b84b;
-    --ouro-fundo: rgba(242, 184, 75, 0.12);
-    --petroleo: #234952;
+    --fundo: #090514;
+    --fundo-2: #120926;
+    --cartao: #150b2b;
+    --cartao-hover: #1d103a;
+    --borda: #2e1b54;
+    --borda-forte: #4c2d85;
+    --texto: #f5f3ff;
+    --suave: #cbbbe6;
+    --fraco: #9f8bc2;
+
+    /* paleta noturna: violeta luminoso + rosa sakura */
+    --roxo: #9333ea;
+    --roxo-claro: #c084fc;
+    --roxo-fundo: rgba(168, 85, 247, 0.14);
+    --brilho: rgba(192, 132, 252, 0.36);
+    --ouro: #f472b6;
+    --ouro-fundo: rgba(244, 114, 182, 0.14);
+    --petroleo: #3b1764;
 
     --verde: #4ade80;
-    --vermelho: #f87171;
-    --amarelo: #f2b84b;
+    --vermelho: #fb7185;
+    --amarelo: #f472b6;
 
     --titulo: "Space Grotesk", system-ui, sans-serif;
     --corpo: "Inter", system-ui, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, monospace;
 
-    --raio: 10px;
+    --raio: 12px;
     --largura: 1120px;
     --lateral: 64px;
     --topo-altura: 68px;
@@ -53,8 +55,9 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topo-altura) + 16
 body {
     margin: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 75% 8%, rgba(35, 73, 82, 0.28), transparent 60%),
-        radial-gradient(ellipse 60% 40% at 15% 45%, rgba(217, 65, 65, 0.08), transparent 55%),
+        radial-gradient(ellipse 75% 48% at 82% 8%, rgba(147, 51, 234, 0.24), transparent 62%),
+        radial-gradient(ellipse 60% 42% at 14% 46%, rgba(244, 114, 182, 0.10), transparent 58%),
+        radial-gradient(ellipse 55% 40% at 85% 84%, rgba(126, 34, 206, 0.16), transparent 60%),
         var(--fundo);
     color: var(--texto);
     font-family: var(--corpo);
@@ -64,14 +67,14 @@ body {
     overflow-x: hidden;
 }
 
-/* textura sutil de papel/tinta sobre o fundo */
+/* textura sutil sobre o fundo */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.035;
+    opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -94,6 +97,20 @@ body::before {
     background: linear-gradient(90deg, var(--roxo), var(--ouro));
     transform-origin: left;
     transform: scaleX(var(--progresso, 0));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        @keyframes crescer-progresso {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        .barra-progresso {
+            animation: crescer-progresso auto linear;
+            animation-timeline: scroll(root block);
+        }
+    }
 }
 
 main, .rodape { position: relative; z-index: 2; }
@@ -178,7 +195,7 @@ main:focus { outline: none; }
     right: 0;
     height: var(--topo-altura);
     z-index: 20;
-    background: rgba(11, 10, 16, 0.78);
+    background: rgba(9, 5, 20, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
@@ -317,7 +334,10 @@ main, .rodape { margin-left: var(--lateral); }
     border-radius: 50%;
     background: var(--verde);
     box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
-    animation: pulso 2.4s infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ponto { animation: pulso 2.4s infinite; }
 }
 
 @keyframes pulso {
@@ -331,7 +351,7 @@ main, .rodape { margin-left: var(--lateral); }
     letter-spacing: -0.02em;
     margin-bottom: 24px;
 }
-.destaque { color: var(--roxo); white-space: nowrap; }
+.destaque { color: var(--roxo-claro); white-space: nowrap; }
 .cargo { display: block; font-size: 0.78em; margin-top: 6px; }
 
 .hero-descricao {
@@ -356,7 +376,17 @@ main, .rodape { margin-left: var(--lateral); }
 }
 .hero-sociais a:hover { color: var(--roxo-claro); border-color: var(--roxo); }
 
-.hero-foto { display: flex; justify-content: center; }
+.hero-foto { position: relative; display: flex; justify-content: center; }
+
+.hero-lua {
+    position: absolute;
+    top: -38px;
+    right: 6%;
+    width: 78px;
+    height: 78px;
+    pointer-events: none;
+    filter: drop-shadow(0 0 18px rgba(192, 132, 252, 0.45));
+}
 
 .foto-anel {
     position: relative;
@@ -364,11 +394,14 @@ main, .rodape { margin-left: var(--lateral); }
     aspect-ratio: 1;
     border-radius: 50%;
     padding: 6px;
-    background: conic-gradient(from 210deg, var(--roxo), var(--ouro), #234952, var(--roxo));
+    background: conic-gradient(from 210deg, var(--roxo), var(--ouro), var(--petroleo), var(--roxo));
     box-shadow:
         0 0 36px 2px var(--brilho),
-        0 0 100px 18px rgba(217, 65, 65, 0.18);
-    animation: respirar 6s ease-in-out infinite;
+        0 0 100px 18px rgba(147, 51, 234, 0.22);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .foto-anel { animation: respirar 6s ease-in-out infinite; }
 }
 
 .foto-anel img {
@@ -381,9 +414,50 @@ main, .rodape { margin-left: var(--lateral); }
 }
 
 @keyframes respirar {
-    0%, 100% { box-shadow: 0 0 36px 2px var(--brilho), 0 0 100px 18px rgba(217, 65, 65, 0.18); }
-    50% { box-shadow: 0 0 50px 6px var(--brilho), 0 0 125px 26px rgba(242, 184, 75, 0.22); }
+    0%, 100% { box-shadow: 0 0 36px 2px var(--brilho), 0 0 100px 18px rgba(147, 51, 234, 0.22); }
+    50% { box-shadow: 0 0 52px 6px var(--brilho), 0 0 125px 26px rgba(244, 114, 182, 0.24); }
 }
+
+/* ---------------- faixa do gatinho noturno ---------------- */
+
+.neko-faixa {
+    max-width: var(--largura);
+    margin: 0 auto;
+    padding: 0 32px 12px;
+}
+
+.neko-cartao {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--borda-forte);
+    background: linear-gradient(90deg, #0b0618, #190c33, #0b0618);
+    box-shadow: 0 16px 40px -24px rgba(147, 51, 234, 0.55);
+}
+
+.neko-walk-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.neko-controle {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid var(--borda-forte);
+    background: rgba(9, 5, 20, 0.85);
+    color: var(--suave);
+    font: 500 0.75rem var(--mono);
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+.neko-controle:hover { border-color: var(--ouro); color: var(--texto); }
 
 /* ---------------- botões ---------------- */
 
@@ -404,12 +478,12 @@ main, .rodape { margin-left: var(--lateral); }
 .botao:hover { transform: translateY(-2px); }
 
 .botao-primario {
-    background: var(--roxo);
+    background: linear-gradient(135deg, #7c3aed, var(--roxo));
     color: #fff;
-    border-color: rgba(255, 255, 255, 0.12);
-    box-shadow: 4px 4px 0 rgba(242, 184, 75, 0.35);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 4px 4px 0 rgba(244, 114, 182, 0.34);
 }
-.botao-primario:hover { background: #c53636; box-shadow: 6px 6px 0 rgba(242, 184, 75, 0.55); }
+.botao-primario:hover { background: linear-gradient(135deg, #6d28d9, #a855f7); box-shadow: 6px 6px 0 rgba(244, 114, 182, 0.52); }
 
 .botao-contorno {
     background: transparent;
@@ -567,7 +641,7 @@ main, .rodape { margin-left: var(--lateral); }
 .projeto:hover {
     border-color: var(--ouro);
     transform: translate(-2px, -3px);
-    box-shadow: 6px 6px 0 rgba(217, 65, 65, 0.38);
+    box-shadow: 6px 6px 0 rgba(147, 51, 234, 0.44);
 }
 .projeto[hidden] { display: none; }
 
@@ -635,7 +709,7 @@ main, .rodape { margin-left: var(--lateral); }
     padding: 32px;
     border-bottom: none;
     border-right: 1px solid var(--borda);
-    background: radial-gradient(circle at 30% 30%, rgba(242, 184, 75, 0.14), rgba(35, 73, 82, 0.2) 45%, transparent 72%), var(--fundo-2);
+    background: radial-gradient(circle at 30% 30%, rgba(244, 114, 182, 0.16), rgba(147, 51, 234, 0.22) 48%, transparent 74%), var(--fundo-2);
 }
 .projeto-destaque .projeto-capa { min-height: 220px; }
 .projeto-destaque .projeto-imagem img {
@@ -676,7 +750,7 @@ main, .rodape { margin-left: var(--lateral); }
     font-family: var(--mono);
     color: var(--texto);
     background: var(--roxo-fundo);
-    border: 1px solid rgba(242, 184, 75, 0.28);
+    border: 1px solid rgba(192, 132, 252, 0.34);
     padding: 2px 7px;
     border-radius: 5px;
 }
@@ -718,7 +792,7 @@ main, .rodape { margin-left: var(--lateral); }
 
 .projeto-capa { display: grid; place-items: center; }
 
-.capa-mentora { background: radial-gradient(circle at 30% 30%, rgba(242, 184, 75, 0.16), rgba(35, 73, 82, 0.24) 50%, transparent 72%), var(--fundo-2); }
+.capa-mentora { background: radial-gradient(circle at 30% 30%, rgba(244, 114, 182, 0.18), rgba(147, 51, 234, 0.24) 50%, transparent 72%), var(--fundo-2); }
 .capa-streak { text-align: center; }
 .capa-numero { display: block; font: 700 2.1rem/1.1 var(--titulo); color: var(--texto); }
 .capa-legenda { display: block; font: 500 0.82rem var(--mono); color: var(--roxo-claro); margin: 8px 0 14px; }
@@ -791,7 +865,7 @@ main, .rodape { margin-left: var(--lateral); }
     flex-shrink: 0;
 }
 
-.capa-atlas { background: #0d0c12; padding: 20px; text-decoration: none; }
+.capa-atlas { background: #0c071a; padding: 20px; text-decoration: none; }
 .capa-atlas pre {
     margin: 0;
     font: 0.78rem/1.9 var(--mono);
@@ -937,7 +1011,7 @@ main, .rodape { margin-left: var(--lateral); }
     border: 1.5px solid var(--borda-forte);
     border-radius: 18px;
     background:
-        radial-gradient(ellipse at top, rgba(242, 184, 75, 0.14), rgba(217, 65, 65, 0.08) 45%, transparent 70%),
+        radial-gradient(ellipse at top, rgba(244, 114, 182, 0.16), rgba(147, 51, 234, 0.14) 48%, transparent 72%),
         var(--cartao);
 }
 .contato-cartao h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px; }
@@ -988,7 +1062,7 @@ main, .rodape { margin-left: var(--lateral); }
         flex-direction: column;
         gap: 0;
         padding: 8px 16px 16px;
-        background: rgba(10, 13, 16, 0.97);
+        background: rgba(9, 5, 20, 0.97);
         border-bottom: 1px solid var(--borda);
         display: none;
     }
@@ -1018,6 +1092,9 @@ main, .rodape { margin-left: var(--lateral); }
     .lateral { display: none; }
     .secao, .hero { padding: 72px 16px; }
     .hero { padding-top: calc(var(--topo-altura) + 32px); }
+    .hero-lua { top: -24px; right: 12%; width: 58px; height: 58px; }
+    .neko-faixa { padding: 0 16px 8px; }
+    .neko-controle { top: 6px; right: 8px; font-size: 0.68rem; padding: 3px 8px; }
     .topo-conteudo { padding: 0 16px; }
     .projeto-destaque .projeto-corpo { padding: 22px; }
     .projetos-grade { grid-template-columns: 1fr; }
@@ -1036,11 +1113,16 @@ main, .rodape { margin-left: var(--lateral); }
 /* respeita quem pediu menos movimento no sistema (por componente, sem reset global abrupto) */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .ponto, .foto-anel { animation: none; }
     .js .revelar { opacity: 1; transform: none; transition: none; }
     .botao, .projeto, .projeto-imagem img, .tecnologias li, .lateral a, .menu-botao span {
         transition: none;
     }
+}
+
+@media (forced-colors: active) {
+    .barra-progresso { background: Highlight; }
+    .botao-primario, .filtro.ativo { border: 2px solid ButtonText; }
+    .projeto, .bloco, .lt-cartao, .certificado, .sobre-fatos, .neko-cartao { border: 1px solid CanvasText; }
 }
 
 @media print {

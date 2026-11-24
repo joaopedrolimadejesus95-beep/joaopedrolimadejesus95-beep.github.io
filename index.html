@@ -15,7 +15,7 @@
     <meta property="og:image:height" content="627">
     <meta property="og:image:alt" content="João Pedro Lima de Jesus, Desenvolvedor Backend e IA aplicada, aberto a estágio">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#0a0d10">
+    <meta name="theme-color" content="#090514">
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -87,11 +87,134 @@
                 </div>
             </div>
             <div class="hero-foto">
+                <svg class="hero-lua" viewBox="0 0 80 80" aria-hidden="true">
+                    <defs>
+                        <mask id="heroLuaMask">
+                            <rect width="80" height="80" fill="#000"/>
+                            <circle cx="40" cy="40" r="28" fill="#fff"/>
+                            <circle cx="52" cy="32" r="23" fill="#000"/>
+                        </mask>
+                    </defs>
+                    <circle cx="40" cy="40" r="36" fill="#c084fc" fill-opacity="0.14"/>
+                    <circle cx="40" cy="40" r="28" fill="#f3e8ff" mask="url(#heroLuaMask)"/>
+                    <circle cx="23" cy="46" r="3.2" fill="#d8b4fe" fill-opacity="0.55"/>
+                    <circle cx="30" cy="57" r="2" fill="#d8b4fe" fill-opacity="0.45"/>
+                </svg>
                 <div class="foto-anel">
                     <img src="https://avatars.githubusercontent.com/u/277580070?s=460&v=4" width="460" height="460" alt="Foto de João Pedro Lima de Jesus">
                 </div>
             </div>
         </section>
+
+        <!-- FAIXA DO GATINHO NOTURNO -->
+        <div class="neko-faixa">
+            <div class="neko-cartao">
+                <svg class="neko-walk-svg" viewBox="0 0 1200 92" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="walkBg" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#0B0618" />
+                            <stop offset="50%" stop-color="#190C33" />
+                            <stop offset="100%" stop-color="#0B0618" />
+                        </linearGradient>
+                        <linearGradient id="ledgeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.15" />
+                            <stop offset="50%" stop-color="#F472B6" stop-opacity="0.65" />
+                            <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.15" />
+                        </linearGradient>
+                        <mask id="walkMoon">
+                            <rect x="25" y="10" width="56" height="56" fill="#000" />
+                            <circle cx="52" cy="36" r="13" fill="#FFF" />
+                            <circle cx="58" cy="32" r="10.5" fill="#000" />
+                        </mask>
+                    </defs>
+                    <rect width="1200" height="92" fill="url(#walkBg)" />
+                    <circle cx="88" cy="17" r="1.4" fill="#F3E8FF" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.6s" begin="0.4s" repeatCount="indefinite" /></circle>
+                    <circle cx="220" cy="45" r="1.6" fill="#FBCFE8" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.4s" begin="0.1s" repeatCount="indefinite" /></circle>
+                    <circle cx="381" cy="16" r="1.6" fill="#DDD6FE" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.7s" begin="1.5s" repeatCount="indefinite" /></circle>
+                    <circle cx="465" cy="40" r="1.2" fill="#FBCFE8" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.1s" begin="1.3s" repeatCount="indefinite" /></circle>
+                    <circle cx="597" cy="24" r="1.1" fill="#FBCFE8" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.7s" begin="1.6s" repeatCount="indefinite" /></circle>
+                    <circle cx="747" cy="38" r="1.4" fill="#FFFFFF" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="4.3s" begin="0s" repeatCount="indefinite" /></circle>
+                    <circle cx="901" cy="54" r="1.4" fill="#F3E8FF" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.0s" begin="0.8s" repeatCount="indefinite" /></circle>
+                    <circle cx="1028" cy="25" r="1.2" fill="#DDD6FE" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.1s" begin="0.7s" repeatCount="indefinite" /></circle>
+                    <circle cx="1157" cy="28" r="1.2" fill="#DDD6FE" opacity="0.75"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="3.4s" begin="1.3s" repeatCount="indefinite" /></circle>
+                    <ellipse cx="600" cy="82" rx="460" ry="26" fill="#7E22CE" fill-opacity="0.22" />
+                    <path d="M 0 75 L 0 58 L 36 58 L 36 46 L 74 46 L 74 62 L 126 62 L 126 52 L 170 52 L 170 75 Z M 1020 75 L 1020 50 L 1064 50 L 1064 60 L 1110 60 L 1110 44 L 1158 44 L 1158 58 L 1200 58 L 1200 75 Z" fill="#120826" fill-opacity="0.85" />
+                    <circle cx="52" cy="36" r="20" fill="#C084FC" fill-opacity="0.12" />
+                    <circle cx="52" cy="36" r="13" fill="#F3E8FF" mask="url(#walkMoon)" />
+                    <rect x="0" y="75" width="1200" height="17" fill="#070410" />
+                    <rect x="0" y="75" width="1200" height="1.8" fill="url(#ledgeGlow)" />
+                    <g opacity="0.68">
+                        <animateTransform attributeName="transform" type="translate" from="241 -16" to="274 107" dur="8.7s" begin="-2.0s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="0" rx="3.2" ry="1.7" fill="#FBCFE8"><animateTransform attributeName="transform" type="rotate" from="0" to="189" dur="5.7s" repeatCount="indefinite" /></ellipse>
+                    </g>
+                    <g opacity="0.68">
+                        <animateTransform attributeName="transform" type="translate" from="555 -19" to="507 107" dur="11.0s" begin="-5.2s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="0" rx="3.2" ry="1.7" fill="#F472B6"><animateTransform attributeName="transform" type="rotate" from="0" to="297" dur="7.2s" repeatCount="indefinite" /></ellipse>
+                    </g>
+                    <g opacity="0.68">
+                        <animateTransform attributeName="transform" type="translate" from="869 -23" to="852 107" dur="9.7s" begin="-1.7s" repeatCount="indefinite" />
+                        <ellipse cx="0" cy="0" rx="3.2" ry="1.7" fill="#E879F9"><animateTransform attributeName="transform" type="rotate" from="0" to="190" dur="6.3s" repeatCount="indefinite" /></ellipse>
+                    </g>
+                    <g transform="translate(0, 24)">
+                        <g>
+                            <animateTransform attributeName="transform" type="translate" from="-95 0" to="1240 0" dur="14s" begin="-4s" repeatCount="indefinite" />
+                            <g transform="scale(0.88)">
+                                <ellipse cx="42" cy="58" rx="23" ry="3.2" fill="#000000" fill-opacity="0.55" />
+                                <g>
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 3,-4; 0,-1; -2,-5; 0,0" dur="1.9s" repeatCount="indefinite" />
+                                    <circle cx="92" cy="24" r="4.5" fill="#F472B6" fill-opacity="0.28" />
+                                    <ellipse cx="92" cy="24" rx="2.8" ry="1.6" transform="rotate(-25 92 24)" fill="#F9A8D4" />
+                                </g>
+                                <g opacity="0.78">
+                                    <animateTransform attributeName="transform" type="rotate" values="-20 24 41; 20 24 41; -20 24 41" dur="0.72s" repeatCount="indefinite" />
+                                    <path d="M 22 40 L 18 55 Q 18 58 23 58 L 25 56 L 26 41 Z" fill="#06040C" stroke="#7E22CE" stroke-width="1.2" stroke-linejoin="round" />
+                                </g>
+                                <g opacity="0.78">
+                                    <animateTransform attributeName="transform" type="rotate" values="20 53 41; -20 53 41; 20 53 41" dur="0.72s" repeatCount="indefinite" />
+                                    <path d="M 51 40 L 53 55 Q 53 58 58 58 L 59 56 L 55 40 Z" fill="#06040C" stroke="#7E22CE" stroke-width="1.2" stroke-linejoin="round" />
+                                </g>
+                                <g>
+                                    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-1.6; 0,0" dur="0.36s" repeatCount="indefinite" />
+                                    <g>
+                                        <animateTransform attributeName="transform" type="rotate" values="-10 21 35; 12 21 35; -10 21 35" dur="1.44s" repeatCount="indefinite" />
+                                        <path d="M 21 35 C 11 33, 5 23, 9 13 C 11 7, 16 6, 18 9" fill="none" stroke="#A855F7" stroke-opacity="0.85" stroke-width="6.4" stroke-linecap="round" />
+                                        <path d="M 21 35 C 11 33, 5 23, 9 13 C 11 7, 16 6, 18 9" fill="none" stroke="#080610" stroke-width="4.2" stroke-linecap="round" />
+                                    </g>
+                                    <path d="M 20 38 C 19 32, 26 29, 39 29 C 49 29, 55 30, 59 34 C 62 38, 61 44, 54 45 C 45 46, 30 46, 22 44 C 19 43, 19 40, 20 38 Z" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.4" />
+                                    <g>
+                                        <animateTransform attributeName="transform" type="rotate" values="20 27 41; -20 27 41; 20 27 41" dur="0.72s" repeatCount="indefinite" />
+                                        <path d="M 25 40 L 23 55 Q 23 58 28 58 L 30 56 L 29 40 Z" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.3" stroke-linejoin="round" />
+                                    </g>
+                                    <g>
+                                        <animateTransform attributeName="transform" type="rotate" values="-20 55 41; 20 55 41; -20 55 41" dur="0.72s" repeatCount="indefinite" />
+                                        <path d="M 53 40 L 55 55 Q 55 58 60 58 L 61 56 L 57 40 Z" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.3" stroke-linejoin="round" />
+                                    </g>
+                                    <path d="M 55 31 Q 60 33 63 31" fill="none" stroke="#F472B6" stroke-width="2.2" stroke-linecap="round" />
+                                    <circle cx="62.5" cy="34" r="2.1" fill="#FDE047" />
+                                    <g>
+                                        <path d="M 55 16 L 53 4 L 62 13 Z" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.3" stroke-linejoin="round" />
+                                        <path d="M 55.5 14 L 54.6 7.5 L 60 12.8 Z" fill="#F472B6" fill-opacity="0.85" />
+                                        <ellipse cx="63.5" cy="22.5" rx="10.8" ry="9.4" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.4" />
+                                        <path d="M 64 13.5 L 68.5 3 L 72.5 15 Z" fill="#080610" stroke="#A855F7" stroke-opacity="0.85" stroke-width="1.3" stroke-linejoin="round" />
+                                        <path d="M 65.5 13 L 68.2 6.5 L 70.6 14 Z" fill="#F472B6" fill-opacity="0.85" />
+                                        <ellipse cx="64.5" cy="22" rx="1.9" ry="2.3" fill="#FDE047" />
+                                        <ellipse cx="70.2" cy="22" rx="1.9" ry="2.3" fill="#FDE047" />
+                                        <ellipse cx="64.7" cy="22" rx="0.6" ry="1.5" fill="#080610" />
+                                        <ellipse cx="70.4" cy="22" rx="0.6" ry="1.5" fill="#080610" />
+                                        <circle cx="64" cy="21.1" r="0.55" fill="#FFFFFF" />
+                                        <circle cx="69.7" cy="21.1" r="0.55" fill="#FFFFFF" />
+                                        <polygon points="72.4,24.8 74,24.8 73.2,26" fill="#F472B6" />
+                                        <path d="M 73.5 25.5 Q 78 24.5 81 25" fill="none" stroke="#C084FC" stroke-opacity="0.65" stroke-width="0.7" />
+                                        <path d="M 73.5 26.8 Q 78 27 80.5 28.2" fill="none" stroke="#C084FC" stroke-opacity="0.65" stroke-width="0.7" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <button type="button" class="neko-controle" id="controle-neko">❚❚ Pausar cena</button>
+            </div>
+        </div>
 
         <!-- SOBRE -->
         <section class="secao" id="sobre">

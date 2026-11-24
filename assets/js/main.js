@@ -9,18 +9,26 @@ const linksMenu = menu.querySelectorAll("a");
 
 // ---------- borda do topo e barra de progresso ao rolar ----------
 
+const suportaScrollTimeline = CSS.supports("animation-timeline", "scroll()");
+
 function atualizarTopo() {
     topo.classList.toggle("rolou", window.scrollY > 10);
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const progresso = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
-    document.documentElement.style.setProperty("--progresso", progresso.toFixed(4));
+    if (!suportaScrollTimeline) {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progresso = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+        document.documentElement.style.setProperty("--progresso", progresso.toFixed(4));
+    }
 }
 window.addEventListener("scroll", atualizarTopo, { passive: true });
 atualizarTopo();
 
-// ---------- atmosfera artística (folhas de bordo + luz de lampião + estrelas) ----------
+// ---------- atmosfera artística (pétalas de sakura + vaga-lumes roxos + estrelas) ----------
 
 const canvasAtmosfera = document.getElementById("atmosfera");
+const nekoSvg = document.querySelector(".neko-walk-svg");
+const botaoPausarNeko = document.getElementById("controle-neko");
+let animacoesPausadas = false;
+
 if (canvasAtmosfera && canvasAtmosfera.getContext) {
     const ctx = canvasAtmosfera.getContext("2d");
     const prefereMenosMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -41,17 +49,17 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
     }
 
     function criarParticula(inicioAleatorio) {
-        const tipo = Math.random() < 0.38 ? "folha" : Math.random() < 0.72 ? "lampiao" : "estrela";
+        const tipo = Math.random() < 0.42 ? "sakura" : Math.random() < 0.74 ? "vagalume" : "estrela";
         return {
             tipo,
             x: Math.random() * largura,
             y: inicioAleatorio ? Math.random() * altura : -20,
-            tamanho: tipo === "folha" ? 4 + Math.random() * 5 : 1.2 + Math.random() * 2.2,
-            vx: tipo === "folha" ? -0.25 + Math.random() * 0.55 : (Math.random() - 0.5) * 0.18,
-            vy: tipo === "folha" ? 0.35 + Math.random() * 0.45 : -0.15 - Math.random() * 0.25,
+            tamanho: tipo === "sakura" ? 3.5 + Math.random() * 4.5 : 1.2 + Math.random() * 2.1,
+            vx: tipo === "sakura" ? -0.25 + Math.random() * 0.55 : (Math.random() - 0.5) * 0.18,
+            vy: tipo === "sakura" ? 0.35 + Math.random() * 0.45 : -0.15 - Math.random() * 0.25,
             angulo: Math.random() * Math.PI * 2,
             giro: (Math.random() - 0.5) * 0.02,
-            alfa: tipo === "estrela" ? 0.2 + Math.random() * 0.35 : 0.25 + Math.random() * 0.45
+            alfa: tipo === "estrela" ? 0.2 + Math.random() * 0.38 : 0.28 + Math.random() * 0.45
         };
     }
 
@@ -72,7 +80,7 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
                 p.angulo += p.giro;
                 if (p.y > altura + 24 || p.y < -28 || p.x < -28 || p.x > largura + 28) {
                     particulas[i] = criarParticula(false);
-                    if (p.tipo !== "folha") particulas[i].y = altura + 12;
+                    if (p.tipo !== "sakura") particulas[i].y = altura + 12;
                 }
             }
 
@@ -81,22 +89,22 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
             ctx.rotate(p.angulo);
             ctx.globalAlpha = p.alfa;
 
-            if (p.tipo === "folha") {
-                ctx.fillStyle = "#d94141";
+            if (p.tipo === "sakura") {
+                ctx.fillStyle = "#f472b6";
                 ctx.beginPath();
                 ctx.moveTo(0, -p.tamanho);
-                ctx.quadraticCurveTo(p.tamanho * 0.9, 0, 0, p.tamanho);
-                ctx.quadraticCurveTo(-p.tamanho * 0.9, 0, 0, -p.tamanho);
+                ctx.quadraticCurveTo(p.tamanho * 0.95, 0, 0, p.tamanho);
+                ctx.quadraticCurveTo(-p.tamanho * 0.95, 0, 0, -p.tamanho);
                 ctx.fill();
-            } else if (p.tipo === "lampiao") {
-                ctx.fillStyle = "#f2b84b";
-                ctx.shadowColor = "rgba(242, 184, 75, 0.7)";
+            } else if (p.tipo === "vagalume") {
+                ctx.fillStyle = "#c084fc";
+                ctx.shadowColor = "rgba(192, 132, 252, 0.75)";
                 ctx.shadowBlur = 8;
                 ctx.beginPath();
                 ctx.arc(0, 0, p.tamanho, 0, Math.PI * 2);
                 ctx.fill();
             } else {
-                ctx.fillStyle = "#f2ece1";
+                ctx.fillStyle = "#f5f3ff";
                 ctx.beginPath();
                 ctx.arc(0, 0, p.tamanho * 0.7, 0, Math.PI * 2);
                 ctx.fill();
@@ -106,9 +114,30 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
     }
 
     function loop() {
-        if (!document.hidden && !prefereMenosMovimento.matches) {
+        if (!document.hidden && !prefereMenosMovimento.matches && !animacoesPausadas) {
             desenhar(true);
             quadroId = requestAnimationFrame(loop);
+        }
+    }
+
+    function aplicarEstadoAnimacao(pausar) {
+        animacoesPausadas = pausar;
+        if (pausar) {
+            if (quadroId) {
+                cancelAnimationFrame(quadroId);
+                quadroId = null;
+            }
+            if (nekoSvg && typeof nekoSvg.pauseAnimations === "function") {
+                nekoSvg.pauseAnimations();
+            }
+        } else {
+            if (nekoSvg && typeof nekoSvg.unpauseAnimations === "function") {
+                nekoSvg.unpauseAnimations();
+            }
+            if (!quadroId) loop();
+        }
+        if (botaoPausarNeko) {
+            botaoPausarNeko.textContent = pausar ? "▶ Animar cena" : "❚❚ Pausar cena";
         }
     }
 
@@ -116,8 +145,15 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
     iniciarParticulas();
     if (prefereMenosMovimento.matches) {
         desenhar(false);
+        aplicarEstadoAnimacao(true);
     } else {
         loop();
+    }
+
+    if (botaoPausarNeko) {
+        botaoPausarNeko.addEventListener("click", () => {
+            aplicarEstadoAnimacao(!animacoesPausadas);
+        });
     }
 
     window.addEventListener("resize", redimensionar, { passive: true });
@@ -125,7 +161,7 @@ if (canvasAtmosfera && canvasAtmosfera.getContext) {
         if (document.hidden && quadroId) {
             cancelAnimationFrame(quadroId);
             quadroId = null;
-        } else if (!document.hidden && !prefereMenosMovimento.matches && !quadroId) {
+        } else if (!document.hidden && !prefereMenosMovimento.matches && !animacoesPausadas && !quadroId) {
             loop();
         }
     });
